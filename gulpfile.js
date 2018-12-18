@@ -60,7 +60,7 @@ gulp.task("pug", () => {
   return gulp
     .src(`${config.VIEWS_DIR}/pages/*.pug`)
     .pipe($gp.plumber())
-    .pipe($gp.pug())
+    .pipe($gp.pug({pretty: '\t'}))
     .pipe(gulp.dest(`${config.DIST_DIR}`))
     .pipe(reload({ stream: true }));
 });
@@ -76,7 +76,7 @@ gulp.task("server", () => {
 });
 
 // спрайт иконок
-gulp.task("svg", done => {
+gulp.task("svg", () => {
   return gulp
     .src(`${config.SRC_DIR}/images/icons/*.svg`)
     .pipe(

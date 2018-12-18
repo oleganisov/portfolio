@@ -1,6 +1,14 @@
 extends ../auth.layout.pug
 
 block content
-  .hello-world
-    +icon('portfolio_header', 'hello-world__block')
-    .inlined-svg
+  .wrapper.wrapper-intro
+    .intro
+      .intro__detail
+        .intro__pic
+          img.intro__img(src='./assets/images/photo.png')
+        .intro__title='Олег Анисов'
+        .intro__text='Личный сайт веб разработчика'
+        .intro__social
+          +social(['vk','github','in'],'icon-blue')
+      .intro__menu
+        +menu(['Мои работы','Обо мне','Блог'])

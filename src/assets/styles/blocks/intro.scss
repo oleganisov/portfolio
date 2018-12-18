@@ -1,0 +1,31 @@
+.wrapper-intro{
+  background: url('./assets/images/intro.png') center center no-repeat/cover;
+}
+.intro{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:#fff;
+  &__detail{
+    padding: 40px 65px;
+    background-color: rgba(28, 31, 41,0.5);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__pic{
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  &__img{
+    max-height: 140px;
+    max-width: 140px;
+  }
+  &__title{
+    margin-bottom: 15px;
+  }
+  &__text{
+    margin-bottom: 40px;
+  }
+}

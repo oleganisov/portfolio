@@ -5,10 +5,17 @@ mixin icon(iconName, iconClass)
 mixin image(imagePath, imageAlt, imageClass)
   img(src=`/assets/images/${imagePath}`, alt=`${imageAlt}`, class=`${imageClass}`)
 
-mixin social(items,colorClass)
+mixin social(items,classColor)
   .social
     ul.social__list
       each item in items
         li.social__item
           a(class=`social__link social__link-${item}` href='#')
-            +icon(`${item}`,`social__icon ${colorClass}`)
+            +icon(`${item}`,`social__icon ${classColor}`)
+mixin menu(items)
+  nav.menu
+    ul.menu__list
+      each item in items
+        li.menu__item
+          a.menu__link(href='#')=item
+  

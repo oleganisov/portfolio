@@ -9,7 +9,7 @@
   color:#fff;
   &__detail{
     padding: 40px 65px;
-    background-color: rgba(28, 31, 41,0.5);
+    background-color: rgba($gray,0.5);
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -23,9 +23,17 @@
     max-width: 140px;
   }
   &__title{
+    font-weight: 500;
+    font-size: 28px;
     margin-bottom: 15px;
   }
   &__text{
     margin-bottom: 40px;
   }
+}
+.copyright-block{
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  bottom: 0;
 }

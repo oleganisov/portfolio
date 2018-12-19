@@ -11,4 +11,6 @@ block content
         .intro__social
           +social(['vk','github','in'],'icon-blue')
       .intro__menu
-        +menu(['Мои работы','Обо мне','Блог'])
+        +menu([{name:'Мои работы',href:'works.html'},{name:'Обо мне',href:'about.html'},{name:'Блог',href:'blog.html'}],'intro-nav')
+  .copyright-block
+    p="© Олег Анисов | Создано с любовью в LoftSchool | 2019"

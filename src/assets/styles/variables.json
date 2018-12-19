@@ -3,7 +3,8 @@
   "beige": "#eeebdf",
   "green": "#16c2aa",
   "text-color": "#455a64",
-  "light-grey": "#dfdcd5",
-  "gray": "#9e9fa3",
-  "blue" : "#0b43aa"
+  "gray-light": "#9e9fa3",
+  "gray": "#474b57",
+  "blue-dark" : "#083c96",
+  "blue-light" : "#0548be"
 }

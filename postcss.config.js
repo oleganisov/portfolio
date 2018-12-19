@@ -23,6 +23,7 @@ module.exports = {
       path: "./src/assets/images/icons"
     }),
     require("postcss-svgo"),
+    require("postcss-plugin-px2rem")({rootValue: 16,selectorBlackList: ['body']}),
     require("cssnano")()
   ]
 };

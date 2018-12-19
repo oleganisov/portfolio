@@ -68,8 +68,8 @@
     "not ie <= 8"
   ],
   "dependencies": {
-    "gulp-px2rem": "^1.0.13",
     "normalize.css": "^7.0.0",
+    "postcss-plugin-px2rem": "^0.8.1",
     "promptly": "^3.0.3",
     "pug": "^2.0.3",
     "request": "^2.87.0",

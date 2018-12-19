@@ -19,7 +19,6 @@ gulp.task("styles", () => {
     .pipe($gp.sourcemaps.init())
     .pipe($gp.plumber())
     .pipe($gp.postcss(require("./postcss.config")))
-    .pipe($gp.px2rem({replace:true}))
     .pipe($gp.rename("main.min.css"))
     .pipe($gp.if(env === "development", $gp.sourcemaps.write()))
     .pipe(gulp.dest(`${config.DIST_DIR}`))

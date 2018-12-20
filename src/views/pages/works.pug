@@ -7,4 +7,21 @@ block scripts
   script(src='./about.bundle.js')
 
 block content
-  h1 Страничка "Мои работы"
+  section.section.hero
+    .container
+      include ../common/header
+      .hero__main
+        .hero__detail
+          .hero__pic
+            img.hero__img(src='./assets/images/photo.png')
+          .hero__name='Олег Анисов'
+          .hero__text='Личный сайт веб разработчика'
+        .hero__arrow
+          +icon('arrow_down','hero__ico')
+        .hero__tittle='Мои работы'
+  section.section.works
+    .container
+      h2 Страничка "Мои работы"
+  section.section.feeds
+    .container
+      h1 Страничка "Отзывы"

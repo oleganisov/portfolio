@@ -1,37 +1,39 @@
-.wrapper-intro{
-  background: url('./assets/images/intro.png') center center no-repeat/cover;
+.wrapper-intro {
+  background: url('./assets/images/bg_intro_1200.png') center center no-repeat/cover;
 }
-.intro{
+
+.intro {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color:#fff;
-  &__detail{
+  color: #fff;
+  &__detail {
     padding: 40px 65px;
-    background-color: rgba($gray,0.5);
-    display:flex;
+    background-color: rgba($gray, 0.5);
+    display: flex;
     flex-direction: column;
     align-items: center;
   }
-  &__pic{
+  &__pic {
     border-radius: 50%;
     margin-bottom: 20px;
   }
-  &__img{
+  &__img {
     max-height: 140px;
     max-width: 140px;
   }
-  &__title{
+  &__title {
     font-weight: 500;
     font-size: 28px;
     margin-bottom: 15px;
   }
-  &__text{
+  &__text {
     margin-bottom: 40px;
   }
 }
-.copyright-block{
+
+.copyright-block {
   color: #fff;
   font-weight: 300;
   position: fixed;

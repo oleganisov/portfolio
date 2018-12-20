@@ -1,27 +1,30 @@
-.social{
-  &__list{
-  display: flex;
+.social {
+  &__list {
+    display: flex;
   }
-  &__item{
+  &__item {
     margin-right: 30px;
-    &:last-child{
+    &:last-child {
       margin-right: initial;
     }
-    }
-  &__icon{
+  }
+  &__icon {
     height: 25px;
     width: 25px;
-    &:hover{
-      fill:$blue-light;
+    &:hover {
+      fill: $blue-light;
     }
-    }
+  }
 }
-.icon-blue{
-  fill:$blue-dark;
+
+.icon-blue {
+  fill: $blue-dark;
 }
-.icon-white{
-  fill:#fff;
+
+.icon-white {
+  fill: #fff;
 }
-.icon-gray{
-  fill:$gray-light;
+
+.icon-gray {
+  fill: $gray-light;
 }

@@ -1,7 +1,7 @@
 extends ../main.layout.pug
 
 block variables
-  - var title = 'Обо мне'
+  - var title = 'Мои работы'
 
 block scripts
   script(src='./about.bundle.js')
@@ -12,8 +12,8 @@ block content
       include ../common/header
       .hero__main
         .hero__detail
-          .hero__pic
-            img.hero__img(src='./assets/images/photo.png')
+          .hero__avatar.avatar-pic
+            img.avatar-img(src='./assets/images/photo.png')
           .hero__name='Олег Анисов'
           .hero__text='Личный сайт веб разработчика'
         .hero__arrow
@@ -21,7 +21,7 @@ block content
         .hero__tittle='Мои работы'
   section.section.works
     .container
-      h2 Страничка "Мои работы"
+      h2 "Мои работы"
   section.section.feeds
     .container
-      h1 Страничка "Отзывы"
+      h1 "Отзывы"

@@ -7,7 +7,11 @@ block scripts
   script(src='./about.bundle.js')
 
 block content
-  section.section.about
+  .hero
     .container
       include ../common/header
+      .hero__main
+        .hero__detail
+          .hero__avatar.avatar-pic
+            img.avatar-img(src='./assets/images/photo.png')
       h1.title Страничка "Обо мне"  

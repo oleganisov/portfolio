@@ -1,13 +1,17 @@
 extends ../main.layout.pug
 
 block variables
-  - var title = 'Обо мне'
+  - var title = 'Блог'
 
 block scripts
   script(src='./about.bundle.js')
 
 block content
-  section.section.blog
+  .hero
     .container
       include ../common/header
+      .hero__main
+        .hero__detail
+          .hero__avatar.avatar-pic
+            img.avatar-img(src='./assets/images/photo.png')
       h1.title Страничка "Блог"  

@@ -4,13 +4,15 @@ block content
   .wrapper.wrapper-intro
     .intro
       .intro__detail
-        .intro__pic
-          img.intro__img(src='./assets/images/photo.png')
+        .intro__avatar.avatar-pic
+          img.avatar-img(src='./assets/images/photo.png')
         .intro__title='Олег Анисов'
         .intro__text='Личный сайт веб разработчика'
         .intro__social
           +social(['vk','github','in'],'icon-blue')
       .intro__menu
         +menu([{name:'Мои работы',href:'works.html'},{name:'Обо мне',href:'about.html'},{name:'Блог',href:'blog.html'}],'intro-nav')
+  .auth-btn
+    a.btn='Авторизоваться'
   .copyright-block
     p="© Олег Анисов | Создано с любовью в LoftSchool | 2019"

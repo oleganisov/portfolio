@@ -8,6 +8,7 @@
     width: calc(100%/3);
     background-color: rgba($blue-light, 0.851);
     position: relative;
+    transition: background-color .3s;
     &::before {
       position: absolute;
       left: 0;

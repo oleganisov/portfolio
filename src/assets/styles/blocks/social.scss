@@ -11,6 +11,7 @@
   &__icon {
     height: 25px;
     width: 25px;
+    transition: fill .3s;
     &:hover {
       fill: $blue-light;
     }

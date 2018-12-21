@@ -15,13 +15,8 @@
     flex-direction: column;
     align-items: center;
   }
-  &__pic {
-    border-radius: 50%;
+  &__avatar{
     margin-bottom: 20px;
-  }
-  &__img {
-    max-height: 140px;
-    max-width: 140px;
   }
   &__title {
     font-weight: 500;

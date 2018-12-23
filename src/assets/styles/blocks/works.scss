@@ -1,12 +1,11 @@
 .works {
   display: flex;
   flex-direction: column;
-  // justify-content: center;
+  justify-content: space-between;
   &__left {
     width: 50%;
   }
   &__right {
     width: 50%;
   }
-
 }

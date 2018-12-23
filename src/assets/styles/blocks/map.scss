@@ -1,0 +1,9 @@
+.map{
+  background: url('./assets/images/bg_map_1800.jpg') center center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &__data{
+    position: relative;
+  }
+}

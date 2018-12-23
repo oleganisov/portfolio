@@ -1,17 +1,45 @@
 .blog {
-  background-color: #ccc;
+  background-color: $white;
   display: flex;
-  &__triangle{
+  flex-direction: column;
+  &__triangle {
     width: 100%;
     display: flex;
     margin-top: -150px;
   }
-//  &__left{
-//    width: 50%;
-//    background-color: $white;
-//  }
-//  &__right{
-//   width: 50%;
-//   background-color: $beige;
-//  }
+  &__main {
+    display: flex;
+  }
+  &__left {
+    width: 25%;
+    margin-right: 115px;
+  }
+  &__right {
+    width: 60%;
+  }
+  &__item {
+    text-align: right;
+    margin-bottom: 40px;
+  }
+  &__link {
+    position: relative;
+    color: $text-color;
+    &::after {
+      position: absolute;
+      top: -8px;
+      right: -10px;
+      content: '';
+      display: block;
+      height: 44px;
+      width: 2px;
+      background-color: $blue-dark;
+    }
+  }
+  &__title{
+    text-transform: initial;
+  }
+}
+
+.blog__link.is-active{
+  color:$blue-dark;
 }

@@ -18,11 +18,21 @@ block content
     .blog__triangle
       svg.triangle.triangle_fill_white(viewbox="0 0 900 150", preserveAspectRatio="none")
         polygon(points="0,0 0,150 900,150")
-      svg.triangle.triangle_fill_beige(viewbox="0 0 900 150", preserveAspectRatio="none")
+      svg.triangle.triangle_fill_white(viewbox="0 0 900 150", preserveAspectRatio="none")
         polygon(points="0,150 900,150 900,0")
+    .blog__main
+      .blog__left
+        .blog__nav
+          - var nav=['Самое важное в SASS','Приёмы в вёрстке, без которых не обходится ни один сайт','Самый необходимый набор Gulp плагинов','Почему я выбрал Jade']
+            ul.blog__list
+              each item in nav
+                li.blog__item
+                  a(href="#").blog__link #{item}
+      .blog__right
+        .blog__title.block-subtitle Самое важное в SASS
+        .blog__date 22 ноября 2016
+        .blog__text
+          p Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.
 
-    //- .blog__left
-
-    //- .blog__right
 
   include ../common/footer.pug

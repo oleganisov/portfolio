@@ -7,11 +7,22 @@ block scripts
   script(src='./about.bundle.js')
 
 block content
-  .hero
-    .container
-      include ../common/header
-      .hero__main
-        .hero__detail
-          .hero__avatar.avatar-pic
-            img.avatar-img(src='./assets/images/photo.png')
-      h1.title Страничка "Блог"  
+  section.section.hero
+    include ../common/header
+    .hero__avatar.avatar
+      .avatar__pic
+        img.avatar__img(src='./assets/images/photo.png')
+      .avatar__name.block-tittle='Блог'
+      .avatar__info='Статьи, которые я написал'
+  section.section.blog
+    .blog__triangle
+      svg.triangle.triangle_fill_white(viewbox="0 0 900 150", preserveAspectRatio="none")
+        polygon(points="0,0 0,150 900,150")
+      svg.triangle.triangle_fill_beige(viewbox="0 0 900 150", preserveAspectRatio="none")
+        polygon(points="0,150 900,150 900,0")
+
+    //- .blog__left
+
+    //- .blog__right
+
+  include ../common/footer.pug

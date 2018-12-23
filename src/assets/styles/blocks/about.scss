@@ -1,3 +1,25 @@
 .about {
-  // background: url('./assets/images/bg_1200.png') center center no-repeat/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  &__left {
+    width: 50%; // &-main {
+    //   display: flex;
+    //   &-tittle {
+    //     flex:1;
+    //     width: 50%;
+    //   }
+    //   &-content {
+    //     flex:1;
+    //     width: 50%;
+    //   }
+    // }
+  }
+  &__right {
+    width: 50%;
+  }
+  &__triangle {
+    width: 100%;
+    margin-top: -150px;
+  }
 }

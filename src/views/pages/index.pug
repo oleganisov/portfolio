@@ -3,11 +3,11 @@ extends ../auth.layout.pug
 block content
   .wrapper.wrapper-intro
     .intro
-      .intro__detail
-        .intro__avatar.avatar-pic
-          img.avatar-img(src='./assets/images/photo.png')
-        .intro__title='Олег Анисов'
-        .intro__text='Личный сайт веб разработчика'
+      .intro__avatar.avatar
+        .avatar__pic
+          img.avatar__img(src='./assets/images/photo.png')
+        .avatar__name='Олег Анисов'
+        .avatar__info.intro__info='Личный сайт веб разработчика'
         .intro__social
           +social(['vk','github','in'],'icon-blue')
       .intro__menu

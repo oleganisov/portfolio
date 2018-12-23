@@ -8,20 +8,30 @@ block scripts
 
 block content
   section.section.hero
-    .container
-      include ../common/header
-      .hero__main
-        .hero__detail
-          .hero__avatar.avatar-pic
-            img.avatar-img(src='./assets/images/photo.png')
-          .hero__name='Олег Анисов'
-          .hero__text='Личный сайт веб разработчика'
-        .hero__arrow
-          +icon('arrow_down','hero__ico')
-        .hero__tittle='Мои работы'
+    include ../common/header
+    .hero__avatar.avatar
+      .avatar__pic
+        img.avatar__img(src='./assets/images/photo.png')
+      .avatar__name='Олег Анисов'
+      .avatar__info='Личный сайт веб разработчика'
+    .hero__arrow
+      +icon('arrow_down','hero__ico')
+    .hero__bottom
+      .hero__triangles
+        svg.triangle.triangle_fill_gray(viewbox="0 0 900 150", preserveAspectRatio="none")
+          polygon(points="0,0 0,150 900,150")
+        svg.triangle.triangle_fill_gray(viewbox="0 0 900 150", preserveAspectRatio="none")
+          polygon(points="0,150 900,150 900,0")
+      .hero__tittle
+        .block-tittle Мои работы
   section.section.works
-    .container
-      h2 "Мои работы"
+    .works__left
+      //- .works__triangle
+
+    .works__right
+      //- .works__triangle
+
   section.section.feeds
     .container
       h1 "Отзывы"
+    include ../common/footer.pug

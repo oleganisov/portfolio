@@ -38,3 +38,12 @@
 		background-color: $text-color;
 	}
 }
+
+.articles__item-title {
+	text-align: left;
+	margin-bottom: 20px;
+	text-transform: initial;
+	&:after {
+		display: none;
+	}
+}

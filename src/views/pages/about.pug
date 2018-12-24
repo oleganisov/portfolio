@@ -9,14 +9,15 @@ block scripts
 block content
   section.section.hero
     include ../common/header
+    .hero__background--svg.background-svg
     .hero__avatar.avatar
       .avatar__pic
         img.avatar__img(src='./assets/images/photo.png')
       .avatar__name='Олег Анисов'
       .avatar__info='Личный сайт веб разработчика'
-    a.hero__arrow
-      +icon('arrow_down','hero__ico')
-  section.section.about
+    a.btn-next(href="#about_me")
+      +icon('arrow_down','btn-next__ico')
+  section.section.about#about_me
     .about__left
       .about__triangle
         svg.triangle.triangle_fill_white(viewbox="0 0 900 150", preserveAspectRatio="none")
@@ -38,7 +39,7 @@ block content
         svg.triangle.triangle_fill_beige(viewbox="0 0 900 150", preserveAspectRatio="none")
           polygon(points="0,150 900,150 900,0")
       .about__right-content
-        .about__right-tittle
+        .about__right-title
           h2.title-h2 Чем я могу быть вам полезен
         .about__right-desc.text-content
           p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.

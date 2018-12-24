@@ -36,16 +36,15 @@
 							</div>
 						</div>
 					</header>
+					<div class="hero__background--svg background-svg"></div>
 					<div class="hero__avatar avatar">
 						<div class="avatar__pic"><img class="avatar__img" src="./assets/images/photo.png"></div>
 						<div class="avatar__name">Олег Анисов</div>
 						<div class="avatar__info">Личный сайт веб разработчика</div>
-					</div>
-					<div class="hero__arrow">
-						<svg class="hero__ico">
-							<use xlink:href="./assets/images/icons/sprite.svg#arrow_down"></use>
-						</svg>
-					</div>
+					</div><a class="btn-next" href="#myworks">
+						<svg class="btn-next__ico">
+							<use xlink:href="./assets/images/icons/sprite.svg#portf_arrow_down"></use>
+						</svg></a>
 					<div class="hero__bottom">
 						<div class="hero__triangles">
 							<svg class="triangle triangle_fill_gray" viewbox="0 0 900 150" preserveAspectRatio="none">
@@ -55,12 +54,12 @@
 								<polygon points="0,150 900,150 900,0"></polygon>
 							</svg>
 						</div>
-						<div class="hero__tittle">
+						<div class="hero__title">
 							<h1 class="title-h1 title-h1--works">Мои работы</h1>
 						</div>
 					</div>
 				</section>
-				<section class="section works">
+				<section class="section works" id="myworks">
 					<div class="works__content">
 						<div class="works__slider">
 							<div class="slider">
@@ -75,18 +74,18 @@
 										<div class="slider__item-right">
 											<div class="slider__item-right-top">
 												<div class="slider__item-image"><img class="slider__item-image-pic" src="./assets/images/slide1.png"></div>
-												<div class="slider__item-right-bot">
-													<div class="slider__item-nav">
-														<div class="slider__item-prev">
-															<svg class="slider__icon">
-																<use xlink:href="./assets/images/icons/sprite.svg#portf_arrow_down"></use>
-															</svg>
-														</div>
-														<div class="slider__item-next">
-															<svg class="slider__icon">
-																<use xlink:href="./assets/images/icons/sprite.svg#portf_arrow_up"></use>
-															</svg>
-														</div>
+											</div>
+											<div class="slider__item-right-bottom">
+												<div class="slider__item-nav">
+													<div class="slider__item-prev">
+														<svg class="slider__icon">
+															<use xlink:href="./assets/images/icons/sprite.svg#portf_arrow_down"></use>
+														</svg>
+													</div>
+													<div class="slider__item-next">
+														<svg class="slider__icon">
+															<use xlink:href="./assets/images/icons/sprite.svg#portf_arrow_up"></use>
+														</svg>
 													</div>
 												</div>
 											</div>
@@ -99,7 +98,7 @@
 				</section>
 				<section class="section feeds">
 					<div class="feeds__content">
-						<div class="feeds-title">
+						<div class="feeds__title">
 							<h2 class="title-h1 title-h1--feeds">Что обо мне говорят</h2>
 						</div>
 						<div class="reviews">
@@ -127,7 +126,7 @@
 							</ul>
 						</div>
 						<div class="form">
-							<form class="form__area" action="/" method="post">
+							<form class="form__area" action="post">
 								<div class="form__fields">
 									<h2 class="title-h2 title-h2--color--white form__title">Связаться со мной</h2>
 									<div class="form__row">
@@ -156,8 +155,8 @@
 									</div>
 								</div>
 							</form>
-						</div><a class="btn-up" href="#works">
-							<svg class="btn-up__icon">
+						</div><a class="btn-prev" href="#myworks">
+							<svg class="btn-prev__ico">
 								<use xlink:href="./assets/images/icons/sprite.svg#portf_arrow_up"></use>
 							</svg></a>
 					</div>

@@ -1,8 +1,9 @@
-.auth-btn{
+.auth-btn {
   position: absolute;
-  top:5%;
+  top: 5%;
   right: 5%;
 }
+
 .btn {
   font-weight: 500;
   padding: 15px 30px;
@@ -12,7 +13,7 @@
   border: 1px solid #fff;
   transition: .3s;
   cursor: pointer;
-  &:hover{
+  &:hover {
     background-color: $blue-dark;
     border: 1px solid transparent;
   }
@@ -27,33 +28,42 @@
   border: 1px solid $blue-light;
   transition: .3s;
   cursor: pointer;
-  &:hover{
+  &:hover {
     background-color: $blue-dark;
     border: 1px solid transparent;
   }
 }
 
-.btn-up {
-	display: inline-block;
-	width: 26px;
-	height: 16px;
-	position: absolute;
-	bottom: 70px;
-	left: 50%;
-	transform: translateX(-50%);
-	background-color: transparent;
-	padding: 0;
-	z-index: 1;
-	&:hover {
-		.btn-up__icon {
-			opacity: 1;
-		}
-	}
+%btn_arrow {
+  width: 33px;
+  height: 22px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
 }
-.btn-up__icon {
-	transition: .3s;
-	width: 100%;
-	height: 100%;
-	fill: $white;
-	opacity: .7;
+
+.btn-next {
+  @extend %btn_arrow;
+  bottom: 20%;
+  &:hover .btn-next__ico {
+    opacity: 1;
+  }
+}
+
+.btn-prev {
+  @extend %btn_arrow;
+  bottom: 5%;
+  &:hover .btn-prev__ico {
+    opacity: 1;
+  }
+}
+
+.btn-next__ico,
+.btn-prev__ico {
+  transition: .3s;
+  width: 100%;
+  height: 100%;
+  fill: $white;
+  opacity: .7;
 }

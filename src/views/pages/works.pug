@@ -9,22 +9,23 @@ block scripts
 block content
   section.section.hero
     include ../common/header
+    .hero__background--svg.background-svg
     .hero__avatar.avatar
       .avatar__pic
         img.avatar__img(src='./assets/images/photo.png')
       .avatar__name='Олег Анисов'
       .avatar__info='Личный сайт веб разработчика'
-    .hero__arrow
-      +icon('arrow_down','hero__ico')
+    a.btn-next(href="#myworks")
+      +icon('portf_arrow_down','btn-next__ico')
     .hero__bottom
       .hero__triangles
         svg.triangle.triangle_fill_gray(viewbox="0 0 900 150", preserveAspectRatio="none")
           polygon(points="0,0 0,150 900,150")
         svg.triangle.triangle_fill_gray(viewbox="0 0 900 150", preserveAspectRatio="none")
           polygon(points="0,150 900,150 900,0")
-      .hero__tittle
+      .hero__title
         h1.title-h1.title-h1--works= title
-  section.section.works
+  section.section.works#myworks
     .works__content
       .works__slider
         .slider
@@ -39,15 +40,15 @@ block content
                 .slider__item-right-top
                   .slider__item-image
                     img.slider__item-image-pic(src="./assets/images/slide1.png")
-                  .slider__item-right-bot
-                    .slider__item-nav
-                      .slider__item-prev
-                        +icon('portf_arrow_down', 'slider__icon')
-                      .slider__item-next
-                        +icon('portf_arrow_up', 'slider__icon')
+                .slider__item-right-bottom
+                  .slider__item-nav
+                    .slider__item-prev
+                      +icon('portf_arrow_down', 'slider__icon')
+                    .slider__item-next
+                      +icon('portf_arrow_up', 'slider__icon')
   section.section.feeds
     .feeds__content
-      .feeds-title
+      .feeds__title
         h2.title-h1.title-h1--feeds Что обо мне говорят
       .reviews
         ul.reviews__list
@@ -66,7 +67,7 @@ block content
                 .reviews__author-name Сабанцев Владимир
                 .reviews__author-post - преподаватель
       .form
-        form.form__area(action='/', method='post')
+        form.form__area(action='post')
           .form__fields
             h2.title-h2.title-h2--color--white.form__title Связаться со мной
             .form__row
@@ -85,5 +86,5 @@ block content
               .form__btns
                 button.form__button.form__button-submit(type='submit') Отправить
                 button.form__button.form__button-clear(type='clear') Очистить
-      a.btn-up(href="#works")
-        +icon('portf_arrow_up', 'btn-up__icon')
+      a.btn-prev(href="#myworks")
+        +icon('portf_arrow_up', 'btn-prev__ico')

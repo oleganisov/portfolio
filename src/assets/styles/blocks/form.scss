@@ -1,22 +1,27 @@
-.form__area {
-  width: 380px;
-  margin: 0 auto;
-  background-color: rgba(#202027, .6);
-  padding-top: 30px;
-  overflow: hidden;
-}
-
-.form__label {
-  position: absolute;
-  left: -9999px;
-  top: 0;
-  opacity: .8;
-}
-
-.form__title {
-  color: $text-color;
-  &:after {
-    background-color: $text-color;
+.form {
+  &__area {
+    width: 380px;
+    margin: 0 auto;
+    background-color: rgba(#202027, .6);
+    padding-top: 40px;
+    overflow: hidden;
+  }
+  &__fields {
+    width: 90%;
+    margin: 0 auto 15px;
+  }
+  &__title {
+    color: $text-color;
+    margin-bottom: 25px;
+    &:after {
+      background-color: $text-color;
+    }
+  }
+  &__label {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    opacity: .8;
   }
 }
 
@@ -26,11 +31,11 @@
   &:last-child {
     margin-bottom: 0;
   }
-}
-
-.form__fields {
-  width: 90%;
-  margin: 0 auto 15px;
+  &-title {
+    font-weight: bold;
+    opacity: .8;
+    margin-bottom: 30px;
+  }
 }
 
 .form__field {
@@ -38,10 +43,8 @@
   position: relative;
 }
 
-.form__row-title {
-  font-weight: bold;
-  opacity: .8;
-  margin-bottom: 10px;
+.form__btns {
+  display: flex;
 }
 
 .form__button {
@@ -53,12 +56,12 @@
   line-height: 45px;
   transition: .3s;
   &-submit {
-    background-color: rgba($blue-light, .5);
+    background-color: $blue-light;
     &:hover {
       background-color: $blue-dark;
     }
   }
-  &-clear{
+  &-clear {
     background-color: transparent;
   }
 }

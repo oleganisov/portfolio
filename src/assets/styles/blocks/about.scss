@@ -1,22 +1,25 @@
 .about {
-  height: 100vh;
+  position: relative;
   display: flex;
-  justify-content: center;
   &__left {
-    width: 50%; // &-main {
-    //   display: flex;
-    //   &-tittle {
-    //     flex:1;
-    //     width: 50%;
-    //   }
-    //   &-content {
-    //     flex:1;
-    //     width: 50%;
-    //   }
-    // }
+    display: inline-flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: $white;
+    &-content {
+      width: 60%;
+      margin: 0 auto;
+    }
   }
   &__right {
+    display: inline-flex;
+    flex-direction: column;
     width: 50%;
+    background-color: $beige;
+    &-content {
+      width: 90%;
+      margin: 0 auto;
+    }
   }
   &__triangle {
     width: 100%;

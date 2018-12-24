@@ -10,5 +10,6 @@
   "laptop":"1200px",
   "tablets":"768px",
   "phones":"480px",
-  "smallphones":"320px"
+  "smallphones":"320px",
+  "font-tittle" :"sansus"
 }

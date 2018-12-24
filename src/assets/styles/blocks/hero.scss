@@ -21,7 +21,8 @@
     width: 33px;
   }
   &__arrow {
-    display: inline-block;
+    cursor: pointer;
+    z-index: 5;
     text-align: center;
     margin-bottom: 50px;
   }

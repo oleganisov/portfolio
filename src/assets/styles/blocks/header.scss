@@ -2,11 +2,5 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 80px;
-  &__social {
-    margin-left: 2%;
-  }
-  &__ham {
-    margin-right: 2%;
-  }
+  padding: 20px 15px;
 }

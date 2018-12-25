@@ -9,7 +9,6 @@ block scripts
 block content
   section.section.hero
     include ../common/header
-    .hero__background--svg.background-svg
     .hero__avatar.avatar
       .avatar__pic
         img.avatar__img(src='./assets/images/photo.png')
@@ -24,7 +23,7 @@ block content
           polygon(points="0,0 0,150 900,150")
       .about__left-content
         .about__left-title
-          h1.title-h1.title-h1--works= title
+          h1.title-h1.title-h1--about= title
         .user-desc
           .user-desc__pic
             img.user-desc__avatar(src='./assets/images/photo_user.png' alt="фотография")

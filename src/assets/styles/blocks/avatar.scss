@@ -23,3 +23,18 @@
     margin-bottom: 15px;
   }
 }
+.avatar{
+  position: relative;
+  &::before{
+    position: absolute;
+    top: 25%;
+    left:50%;
+    transform: translateX(-50%);
+    content: '';
+    display: inline-block;
+    opacity: .15;
+    height: 200px;
+    width: 400px;
+    background: url('./assets/images/stars1.svg') center center / contain no-repeat;
+  }
+}

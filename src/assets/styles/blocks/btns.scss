@@ -54,7 +54,7 @@
 
 .btn-next {
   @extend %btn_arrow;
-  bottom: 20%;
+  bottom: 15%;
   &:hover .btn-next__ico {
     opacity: 1;
   }

@@ -1,17 +1,27 @@
 .about {
   position: relative;
   display: flex;
+  @include tablets{
+    flex-direction: column;
+  }
   &__left {
     display: inline-flex;
     flex-direction: column;
     width: 50%;
     background-color: $white;
+    @include tablets{
+      width: 100%;
+    }
     &-content {
       width: 60%;
       margin: 0 auto;
     }
     &-title{
       margin-bottom: 60px;
+      @include tablets{
+        margin-bottom: 50px;
+        padding-top: 50px;
+      }
     }
   }
   &__right {
@@ -19,13 +29,27 @@
     flex-direction: column;
     width: 50%;
     background-color: $beige;
+    @include tablets{
+      width: 100%;
+      padding-top: 50px;
+    }
     &-content {
       width: 90%;
       margin: 0 auto;
+      @include tablets{
+        text-align: center;
+      }
+    }
+    &-desc{
+      @include tablets{
+        padding: 0 60px;
+      }
     }
   }
   &__triangle {
+    position: absolute;
     width: 100%;
-    margin-top: -150px;
+    display: flex;
+    top:-150px;
   }
 }

@@ -12,11 +12,17 @@
   &__sidebar {
     width: 25%;
     padding-left: 60px;
+    @include tablets{
+      display: none;
+    }
   }
   &__content {
     width: 75%;
     padding-left: 80px;
     padding-right: 100px;
+    @include tablets{
+      width: 100%;
+    }
   }
   &__title {
     text-transform: initial;

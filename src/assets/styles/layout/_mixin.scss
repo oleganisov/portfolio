@@ -1,8 +1,8 @@
-@function rem($px) {
-  $rem: $px/14px;
-  @return #{$rem}rem;
+@mixin laptop{
+  @media (max-width:$laptop) {
+    @content;
+  }
 }
-
 @mixin tablets{
   @media (max-width:$tablets) {
     @content;
@@ -10,6 +10,11 @@
 }
 @mixin phones{
   @media (max-width:$phones) {
+    @content;
+  }
+}
+@mixin smallphones{
+  @media (max-width:$smallphones) {
     @content;
   }
 }

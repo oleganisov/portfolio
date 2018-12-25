@@ -14,7 +14,9 @@ block content
         img.avatar__img(src='./assets/images/photo.png')
       h1.avatar__name.title-h1= title
       .avatar__info='Статьи, которые я написал'
-  section.section.blog
+    a.btn-next(href="#blog")
+      +icon('arrow_down','btn-next__ico')
+  section.section.blog#blog
     .blog__triangle
       svg.triangle.triangle_fill_white(viewbox="0 0 900 150", preserveAspectRatio="none")
         polygon(points="0,0 0,150 900,150")

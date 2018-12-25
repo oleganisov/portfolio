@@ -4,6 +4,9 @@
     font-size: 28px;
     font-weight: 500;
     margin-bottom: 15px;
+    @include tablets{
+      text-align: center;
+    }
   }
   &-row__item {
     display: inline-block;

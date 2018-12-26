@@ -35,6 +35,9 @@
 .footer-nav {
   &__list {
     display: flex;
+    @include phones{
+      justify-content: center;
+    }
   }
   &__item {
     margin-right: 40px;

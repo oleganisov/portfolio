@@ -1,5 +1,8 @@
 .map{
-  background: url('./assets/images/bg_map_1800.jpg') center center/cover no-repeat;
+  background-image: url('./assets/images/bg_map_1800.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 	position: relative;
 	height: 100vh;
   &__data{

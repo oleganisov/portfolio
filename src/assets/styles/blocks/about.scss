@@ -15,6 +15,10 @@
     &-content {
       width: 60%;
       margin: 0 auto;
+      @include phones{
+        margin: initial;
+        width: 100%;
+      }
     }
     &-title{
       margin-bottom: 60px;

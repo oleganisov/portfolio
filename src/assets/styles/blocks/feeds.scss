@@ -1,5 +1,8 @@
 .feeds {
-	background: url('./assets/images/bg_feed_1200.png') top center/cover no-repeat;
+  background-image: url('./assets/images/bg_feed_1800.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 	position: relative;
   padding-bottom: 155px;
   &__title {

@@ -5,56 +5,64 @@
     height: 100%;
   }
   &__item {
-    display: flex;
     height: 100%;
-    &-left {
-      width: 50%;
+    display: grid;
+    grid-template:
+      "description slider" 70% 
+      "description navigation" 30%
+       / 1fr 1fr;
+    @include tablets {
+      grid-template:
+      "slider" 50%
+      "description" 28%
+      "navigation" 22%
+       / 1fr;
+    }
+    &-description {
+      grid-area: description;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 15%;
+      background-color: $white;
+    }
+    &-top {
+      grid-area: slider;
+      background-color: $beige;
+    }
+    &-bottom {
+      grid-area: navigation;
+    }
+    &-nav {
+      height: 100%;
+      display: flex;
+    }
+    &-technologies {
+      color: $blue-dark;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: 50px;
+    }
+    &-image {
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: $white;
+      height: 100%;
     }
-    &-right {
-      width: 50%;
-      background-color: $beige;
-      &-top {
-        height: 70%;
-      }
-      &-bottom {
-        height: 30%;
-      }
+    &-pic {
+      display: block;
+      max-width: 70%;
+      max-height: 70%;
     }
   }
 }
 
-.slider__item-description {
-  width: 80%;
-  text-align: center;
-}
-
-.slider__item-techonologies {
-  color: $blue-dark;
-  text-transform: uppercase;
-  font-weight: 500;
-  margin-bottom: 50px;
-}
-
-.slider__item-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
-.slider__item-image-pic {
-  display: block;
-  max-width: 70%;
-  max-height: 70%;
-}
-
-.slider__item-nav {
-  height: 100%;
-  display: flex;
+.slider__icon {
+  width: 43px;
+  height: 27px;
+  fill: $white;
+  z-index: 10;
 }
 
 .slider__item-prev,
@@ -65,14 +73,6 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  user-select: none;
-}
-
-.slider__icon {
-  width: 43px;
-  height: 27px;
-  fill: $white;
-  z-index: 10;
 }
 
 .slider__item-prev {

@@ -41,6 +41,9 @@
     &:last-child {
       margin-right: initial;
     }
+    @include tablets{
+      margin-right: 20px;
+    }
   }
   &__link {
     color: #fff;

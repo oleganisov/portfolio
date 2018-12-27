@@ -18,10 +18,7 @@ block content
       +icon('portf_arrow_down','btn-next__ico')
     .hero__bottom
       .hero__triangles
-        svg.triangle.triangle_fill_gray(viewbox="0 0 900 150", preserveAspectRatio="none")
-          polygon(points="0,0 0,150 900,150")
-        svg.triangle.triangle_fill_gray(viewbox="0 0 900 150", preserveAspectRatio="none")
-          polygon(points="0,150 900,150 900,0")
+        +triangles('gray','gray')
       .hero__title
         h1.title-h1.title-h1--works= title
   section.section.works#myworks

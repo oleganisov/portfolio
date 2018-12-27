@@ -17,11 +17,8 @@ block content
     a.btn-next(href="#about_me")
       +icon('arrow_down','btn-next__ico')
   section.section.about#about_me
-    .about__triangle
-      svg.triangle.triangle_fill_white(viewbox="0 0 900 150", preserveAspectRatio="none")
-        polygon(points="0,0 0,150 900,150")
-      svg.triangle.triangle_fill_beige(viewbox="0 0 900 150", preserveAspectRatio="none")
-        polygon(points="0,150 900,150 900,0")
+    .about__triangles
+      +triangles('white','beige')
     .about__left
       .about__left-content
         .about__left-title

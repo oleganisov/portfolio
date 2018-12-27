@@ -17,11 +17,8 @@ block content
     a.btn-next(href="#blog")
       +icon('arrow_down','btn-next__ico')
   section.section.blog#blog
-    .blog__triangle
-      svg.triangle.triangle_fill_white(viewbox="0 0 900 150", preserveAspectRatio="none")
-        polygon(points="0,0 0,150 900,150")
-      svg.triangle.triangle_fill_white(viewbox="0 0 900 150", preserveAspectRatio="none")
-        polygon(points="0,150 900,150 900,0")
+    .blog__triangles
+      +triangles('white','white')
     aside.blog__sidebar
       .nav-blog
         ul.nav-blog__list

@@ -25,7 +25,10 @@
     opacity: .15;
     height: 150px;
     width: 250px;
-    background: url('./assets/images/stars2.svg') center center / contain no-repeat;
+    background-image: url('./assets/images/stars2.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }
 .title-h1--feeds {
@@ -41,7 +44,14 @@
     opacity: .15;
     height: 210px;
     width: 175px;
-    background: url('./assets/images/stars3.svg') center center / contain no-repeat;
+    @include phones {
+      height: 126px;
+      width: 105px;
+    }
+    background-image: url('./assets/images/stars3.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }
 

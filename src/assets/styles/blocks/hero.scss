@@ -18,10 +18,14 @@
     font-weight: 500;
     margin-bottom: 15px;
   }
+  &__bottom{
+    position: relative;
+  }
   &__triangles {
-    display: flex;
+    position: absolute;
     width: 100%;
-    margin-top: -150px;
+    display: flex;
+    top:-150px;
   }
   &__title {
     position: relative;

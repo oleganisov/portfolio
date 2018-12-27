@@ -10,7 +10,7 @@ body {
   color: $text-color;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  @include phones {
+  @include tablets {
     font-size: 14px;
   }
 }

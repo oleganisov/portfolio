@@ -1,16 +1,24 @@
-.articles__item {
-	text-align: left;
-	padding-bottom: 60px;
-	border-bottom: 5px solid #ecebe4;
-	margin-bottom: 50px;
-	&:last-child {
-		padding-bottom: 0;
-		border-bottom: none;
-  }
-  &__item-date {
-    display: inline-block;
-    opacity: .7;
-    color: $green;
-    margin-bottom: 20px;
+.articles {
+  margin-bottom: 50px;
+  .articles__item {
+    text-align: left;
+    padding-bottom: 60px;
+    border-bottom: 5px solid #ecebe4;
+    margin-bottom: 50px;
+    @include phones {
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+    }
+    &:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+      margin-bottom: initial;
+    }
+    &-date {
+      display: inline-block;
+      opacity: .7;
+      color: rgba(8, 60, 150, 0.702);
+      margin-bottom: 20px;
+    }
   }
 }

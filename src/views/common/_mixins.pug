@@ -19,4 +19,9 @@ mixin menu(items,className)
       each item in items
         li(class=`${className}__item`)
           a(class=`${className}__link` href=`${item.href}`)=item.name
-  
+
+mixin triangles(classLeftColor,classRightColor)
+  svg(class=`triangle triangle_fill_${classLeftColor}` viewbox="0 0 900 150", preserveAspectRatio="none")
+    polygon(points="0,0 0,150 900,150")
+  svg(class=`triangle triangle_fill_${classRightColor}` viewbox="0 0 900 150", preserveAspectRatio="none")
+    polygon(points="0,150 900,150 900,0")

@@ -44,9 +44,13 @@
     opacity: .15;
     height: 210px;
     width: 175px;
+    @include tablets {
+      height: 174px;
+      width: 144px;
+    }
     @include phones {
-      height: 126px;
-      width: 105px;
+      height: 100px;
+      width: 86px;
     }
     background-image: url('./assets/images/stars3.svg');
     background-position: center;

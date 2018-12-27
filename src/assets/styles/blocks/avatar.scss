@@ -38,6 +38,15 @@
     opacity: .15;
     height: 200px;
     width: 400px;
-    background: url('./assets/images/stars1.svg') center center / contain no-repeat;
+    background-image: url('./assets/images/stars1.svg');
+    // background-image: svg-load('stars1.svg',stroke=$white,fill=$white);
+    background-position:  center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    @include tablets{
+    // top: 15%;
+    width: 284px;
+    height: 161px;
+    }
   }
 }

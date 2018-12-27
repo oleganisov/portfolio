@@ -6,10 +6,14 @@
 	position: relative;
   padding-bottom: 155px;
   &__title {
-    padding-top: 70px;
-    margin-bottom: 60px;
+    padding-top: 6%;
+    margin-bottom: 5%;
     @include phones{
       margin-bottom: 40px;
+    }
+    @include smallphones{
+      padding-top: 25px;
+      margin-bottom: 20px;
     }
   }
 }

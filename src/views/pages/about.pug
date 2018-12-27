@@ -16,7 +16,7 @@ block content
       .avatar__info='Личный сайт веб разработчика'
     a.btn-next(href="#about_me")
       +icon('arrow_down','btn-next__ico')
-  section.section.about#about_me
+  section.about#about_me
     .about__triangles
       +triangles('white','beige')
     .about__left
@@ -52,7 +52,7 @@ block content
                           circle(cx="50" cy="50" r="40").skill__circle.skill__circle_under
                           circle(cx="50" cy="50" r="40").skill__circle.skill__circle_above
                         .skill__title #{skill[0]}
-  section.section.map
+  section.map
     .google-map
     .map__data
       .contacts
@@ -65,4 +65,4 @@ block content
                 .contacts__item-icon
                   +icon(`${item[0]}`, 'contacts__item-icon-img')
                 a.contacts__item-title(href=(item[2] != '') ? `${item[2]}` : '#') #{item[1]}
-  //- include ../common/footer.pug
+  

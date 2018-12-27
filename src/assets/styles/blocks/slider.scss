@@ -18,6 +18,13 @@
       "navigation" 22%
        / 1fr;
     }
+    @include phones {
+      grid-template:
+      "slider" 2fr
+      "description" 1.5fr
+      "navigation" 1fr
+       / 1fr;
+    }
     &-description {
       grid-area: description;
       text-align: center;
@@ -43,6 +50,9 @@
       text-transform: uppercase;
       font-weight: 500;
       margin-bottom: 50px;
+      @include phones{
+        margin-bottom: 20px;
+      }
     }
     &-image {
       display: flex;

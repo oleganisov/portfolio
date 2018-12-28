@@ -5,75 +5,74 @@
   text-align: center;
   position: relative;
   z-index: 5;
-  @include tablets{
+  @include tablets {
     font-size: 49px;
   }
-  @include phones{
+  @include phones {
     font-size: 35px;
   }
+  &--about {
+    &::before {
+      z-index: -5;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(180deg);
+      content: '';
+      display: inline-block;
+      opacity: .15;
+      height: 150px;
+      width: 250px;
+      background-image: url('./assets/images/stars2.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+  &--feeds {
+    color: $white;
+    &::before {
+      z-index: -5;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(25deg);
+      content: '';
+      display: inline-block;
+      opacity: .15;
+      height: 210px;
+      width: 175px;
+      @include tablets {
+        height: 174px;
+        width: 144px;
+      }
+      @include phones {
+        height: 100px;
+        width: 86px;
+      }
+      background-image: url('./assets/images/stars3.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+  &--works {
+    &::before {
+      z-index: -5;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(180deg);
+      content: '';
+      display: inline-block;
+      opacity: .15;
+      height: 150px;
+      width: 250px;
+      background: url('./assets/images/stars2.svg') center center / contain no-repeat;
+    }
+  }
 }
 
-.title-h1--about {
-  &::before{
-    z-index: -5;
-    position: absolute;
-    top: 50%;
-    left:50%;
-    transform: translate(-50%,-50%) rotate(180deg);
-    content: '';
-    display: inline-block;
-    opacity: .15;
-    height: 150px;
-    width: 250px;
-    background-image: url('./assets/images/stars2.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-}
-.title-h1--feeds {
-  color: $white;
-  &::before{
-    z-index: -5;
-    position: absolute;
-    top: 50%;
-    left:50%;
-    transform: translate(-50%,-50%) rotate(25deg);
-    content: '';
-    display: inline-block;
-    opacity: .15;
-    height: 210px;
-    width: 175px;
-    @include tablets {
-      height: 174px;
-      width: 144px;
-    }
-    @include phones {
-      height: 100px;
-      width: 86px;
-    }
-    background-image: url('./assets/images/stars3.svg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-}
-
-.title-h1--works {
-  &::before{
-    z-index: -5;
-    position: absolute;
-    top: 50%;
-    left:50%;
-    transform: translate(-50%,-50%) rotate(180deg);
-    content: '';
-    display: inline-block;
-    opacity: .15;
-    height: 150px;
-    width: 250px;
-    background: url('./assets/images/stars2.svg') center center / contain no-repeat;
-  }
-}
 .title-h2 {
   font-family: $font-title;
   font-size: 35px;
@@ -82,10 +81,10 @@
   text-transform: uppercase;
   text-align: center;
   line-height: 1.2;
-  @include tablets{
+  @include tablets {
     font-size: 30px;
   }
-  @include phones{
+  @include phones {
     font-size: 21px;
   }
   &:after {
@@ -96,18 +95,10 @@
     margin: 15px auto;
     background-color: $text-color;
   }
-}
-.title-h2--color--white {
-	color: $white;
-	&:after {
-		background-color: $gray-light;
-	}
-}
-.articles__item-title {
-  text-align: left;
-  margin-bottom: 20px;
-  text-transform: initial;
-  &:after {
-    display: none;
+  &--color-white {
+    color: $white;
+    &:after {
+      background-color: $gray-light;
+    }
   }
 }

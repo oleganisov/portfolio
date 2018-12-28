@@ -15,17 +15,14 @@
     &:hover {
       fill: $blue-light;
     }
+    &--blue {
+      fill: $blue-dark;
+    }
+    &--white {
+      fill: #fff;
+    }
+    &--gray {
+      fill: $gray-light;
+    }
   }
-}
-
-.icon-blue {
-  fill: $blue-dark;
-}
-
-.icon-white {
-  fill: #fff;
-}
-
-.icon-gray {
-  fill: $gray-light;
 }

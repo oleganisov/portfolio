@@ -27,9 +27,8 @@
       text-decoration: underline;
     }
   }
-}
-
-.ham-menu.is-active {
-  visibility: visible;
-  height: 100%;
+  &.is-active {
+    visibility: visible;
+    height: 100%;
+  }
 }

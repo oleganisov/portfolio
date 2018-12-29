@@ -9,11 +9,8 @@ block scripts
 block content
   section.section.hero
     include ../common/header
-    .hero__avatar.avatar
-      .avatar__pic
-        img.avatar__img(src='./assets/images/photo.png')
-      .avatar__name='Олег Анисов'
-      .avatar__info='Личный сайт веб разработчика'
+    .hero__avatar
+      +avatar('', 'Олег Анисов', 'Личный сайт веб разработчика',true)
     a.btn-next(href="#myworks")
       +icon('portf_arrow_down','btn-next__ico')
     .hero__bottom

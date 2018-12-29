@@ -20,6 +20,18 @@ mixin menu(items,className)
         li(class=`${className}__item`)
           a(class=`${className}__link` href=`${item.href}`)=item.name
 
+mixin avatar(className, title, subtitle, svgExist)
+  .avatar
+    if (svgExist)
+      .avatar__stars
+        svg.avatar__svg
+          use(xlink:href="./assets/images/sprite_stars.svg#stars1")
+    .avatar__pic
+      img.avatar__img(src='./assets/images/photo.png', alt="Photo")
+    .avatar__desc
+      h2(class=`avatar__name ${className}`)=title
+      p.avatar__info= subtitle
+
 mixin triangles(classLeftColor,classRightColor)
   svg(class=`triangle triangle_fill_${classLeftColor}` viewbox="0 0 900 150", preserveAspectRatio="none")
     polygon(points="0,0 0,150 900,150")

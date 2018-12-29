@@ -9,11 +9,8 @@ block scripts
 block content
   section.section.hero
     include ../common/header
-    .hero__avatar.avatar
-      .avatar__pic
-        img.avatar__img(src='./assets/images/photo.png')
-      h1.avatar__name.title-h1= title
-      .avatar__info='Статьи, которые я написал'
+    .hero__avatar
+      +avatar('title-h1', title, 'Статьи, которые я написал',true)
     a.btn-next(href="#blog")
       +icon('arrow_down','btn-next__ico')
   section.blog#blog

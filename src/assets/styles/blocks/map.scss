@@ -4,15 +4,14 @@
   background-repeat: no-repeat;
   background-size: cover;
 	position: relative;
-	height: 100vh;
+  height: 100vh;
+  &__ymaps{
+    height: 100%;
+  }
   &__data{
     position: absolute;
-    display: flex;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    align-items: center;
-    justify-content: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
   }
 }

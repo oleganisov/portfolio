@@ -32,8 +32,13 @@ mixin avatar(className, title, subtitle, svgExist)
       h2(class=`avatar__name ${className}`)=title
       p.avatar__info= subtitle
 
-mixin triangles(classLeftColor,classRightColor)
-  svg(class=`triangle triangle_fill_${classLeftColor}` viewbox="0 0 900 150", preserveAspectRatio="none")
-    polygon(points="0,0 0,150 900,150")
-  svg(class=`triangle triangle_fill_${classRightColor}` viewbox="0 0 900 150", preserveAspectRatio="none")
-    polygon(points="0,150 900,150 900,0")
+mixin triangles(className)
+  div(class=`triangles ${className}`)
+    svg(class=`triangles__svg` viewbox="0 0 1000 85", preserveAspectRatio="none")
+      polygon(class = `triangles__left` points="0,0   0,86   500.8,86   500.8,84")
+      polygon(class = `triangles__right` points="1000,0   1000,86   500,86   500,84")
+    block trianglesBottom
+
+mixin ham-btn
+  .ham-btn#ham_btn
+    .ham-bar

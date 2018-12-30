@@ -2,21 +2,23 @@ extends ../main.layout.pug
 
 block variables
   - var title = 'Обо мне'
+  - var pageClass = 'page-about'
+
+block headerAvatar
+  .header_avatar  
+    +avatar('', 'Олег Анисов', 'Личный сайт веб разработчика',true)
+
+block headerBottom
+  a.btn-next(href="#about_me")
+    +icon('portf_arrow_down','btn-next__ico')
+block trianglesBottom
 
 block scripts
   script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU')
   script(src='./about.bundle.js')
 
 block content
-  section.section.hero
-    include ../common/header
-    .hero__avatar
-      +avatar('', 'Олег Анисов', 'Личный сайт веб разработчика',true)
-    a.btn-next(href="#about_me")
-      +icon('arrow_down','btn-next__ico')
   section.about#about_me
-    .about__triangles
-      +triangles('white','beige')
     .about__left
       .about__left-content
         .about__left-title

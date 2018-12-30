@@ -42,3 +42,7 @@
     }
   }
 }
+
+.page-blog .avatar__name{
+  @include bigTitle;
+}

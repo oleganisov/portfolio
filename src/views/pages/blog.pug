@@ -2,20 +2,21 @@ extends ../main.layout.pug
 
 block variables
   - var title = 'Блог'
+  - var pageClass = 'page-blog'
+
+block headerAvatar
+  .header__avatar  
+    +avatar('', 'Блог', 'Статьи которые я написал',true)
+
+block headerBottom
+
+block trianglesBottom
 
 block scripts
   script(src='./about.bundle.js')
 
 block content
-  section.section.hero
-    include ../common/header
-    .hero__avatar
-      +avatar('title-h1', title, 'Статьи, которые я написал',true)
-    a.btn-next(href="#blog")
-      +icon('arrow_down','btn-next__ico')
   section.blog#blog
-    .blog__triangles
-      +triangles('white','white')
     aside.blog__sidebar
       .nav-blog
         ul.nav-blog__list

@@ -2,22 +2,27 @@ extends ../main.layout.pug
 
 block variables
   - var title = 'Мои работы'
+  - var pageClass = 'page-works'
+
+block headerAvatar
+  .header_avatar  
+    +avatar('', 'Олег Анисов', 'Личный сайт веб разработчика',true)
+
+block headerBottom
+  a.btn-next(href="#myworks")
+    +icon('portf_arrow_down','btn-next__ico')
+
+block trianglesBottom
+  div(class = "triangles__bottom" )
+    h1.title-h1.title-h1--works= title
+    .triangles__stars
+      svg(viewBox="0 0 263 171")
+        use(xlink:href="./assets/images/sprite_stars.svg#stars2")
 
 block scripts
   script(src='./about.bundle.js')
 
 block content
-  section.section.hero
-    include ../common/header
-    .hero__avatar
-      +avatar('', 'Олег Анисов', 'Личный сайт веб разработчика',true)
-    a.btn-next(href="#myworks")
-      +icon('portf_arrow_down','btn-next__ico')
-    .hero__bottom
-      .hero__triangles
-        +triangles('gray','gray')
-      .hero__title
-        h1.title-h1.title-h1--works= title
   section.works#myworks
     .works__content
       .works__slider

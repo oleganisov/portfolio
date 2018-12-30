@@ -3,7 +3,7 @@
   &__main {
     display: grid;
     grid-template: "left center right" 1fr / 1fr 1fr 1fr;
-    background-color: rgba($gray, 0.851);
+    background-color: rgba($gray, 0.85);
     padding: 30px 30px;
     @include tablets {
       padding: 15px 15px;
@@ -20,7 +20,6 @@
   &__left {
     grid-area: left;
     position: relative;
-    // padding-left: 30px;
     @include tablets {
       padding-left: initial;
       margin-bottom: 20px;

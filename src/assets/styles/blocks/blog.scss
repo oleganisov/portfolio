@@ -3,6 +3,7 @@
   display: flex;
   position: relative;
   padding-top: 40px;
+  padding-bottom: 50px;
   &__triangles {
     position: absolute;
     width: 100%;
@@ -29,6 +30,30 @@
     }
   }
   &__title {
+    text-align: left;
+    margin-bottom: 20px;
+    @include smallTitle;
     text-transform: initial;
+  }
+  &__item{
+    text-align: left;
+    padding-bottom: 60px;
+    border-bottom: 5px solid #ecebe4;
+    margin-bottom: 50px;
+    @include phones {
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+    }
+    &:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+      margin-bottom: initial;
+    }
+  }
+  &__date {
+    display: inline-block;
+    opacity: .7;
+    color: rgba(8, 60, 150, 0.702);
+    margin-bottom: 20px;
   }
 }

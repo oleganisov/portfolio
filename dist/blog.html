@@ -55,39 +55,20 @@
 			<div class="maincontent">
 				<section class="blog" id="blog">
 					<aside class="blog__sidebar">
-						<div class="nav-blog">
+						<nav class="nav-blog" id="nav-blog">
 							<ul class="nav-blog__list">
-								<li class="nav-blog__item is-active"><a class="nav-blog__link" href="#">Самое важное в SASS</a></li>
-								<li class="nav-blog__item"><a class="nav-blog__link" href="#">Приёмы в вёрстке, без которых не обходится ни один сайт</a></li>
-								<li class="nav-blog__item"><a class="nav-blog__link" href="#">Самый необходимый набор Gulp плагинов</a></li>
-								<li class="nav-blog__item"><a class="nav-blog__link" href="#">Почему я выбрал Jade</a></li>
+								<li class="nav-blog__item" v-for="post in posts"><a class="nav-blog__link" :href="'#post-'+post.id">{{ post.title }}</a></li>
 							</ul>
-						</div>
+						</nav>
 					</aside>
 					<main class="blog__content">
-						<section class="articles">
-							<article class="articles__item">
-								<div class="articles__item-header">
-									<h2 class="title-h2 articles__item-title">Самое важное в SASS</h2>
-									<time class="articles__item-date">22 ноября 2016</time>
-								</div>
-								<div class="articles__item-content text-content">
-									<p>Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.</p>
-									<p>Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
-									<p><pre class="javascript" style="font-family:monospace;"><ol><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #006600; font-style: italic;">//присвоить</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">$<span style="color: #009900;">&#40;</span>document<span style="color: #009900;">&#41;</span>.<span style="color: #660066;">data</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'prop'</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#123;</span> anything<span style="color: #339933;">:</span> <span style="color: #3366CC;">&quot;любой объект&quot;</span> <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #006600; font-style: italic;">//прочитать</span></div></li><li style="font-weight: bold; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">alert<span style="color: #009900;">&#40;</span> $<span style="color: #009900;">&#40;</span>document<span style="color: #009900;">&#41;</span>.<span style="color: #660066;">data</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">'prop'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>anything <span style="color: #009900;">&#41;</span> <span style="color: #006600; font-style: italic;">//любой объект</span></div></li></ol></pre></p>
-								</div>
-							</article>
-							<article class="articles__item">
-								<div class="articles__item-header">
-									<h2 class="title-h2 articles__item-title">Приёмы в вёрстке, без которых не обходится ни один сайт</h2>
-									<time class="articles__item-date">13 ноября 2016</time>
-								</div>
-								<div class="articles__item-content text-content">
-									<p>Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.</p>
-									<p>Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</p>
-								</div>
-							</article>
-						</section>
+						<ul class="blog__list">
+							<li class="blog__item" :id="'post-' + post.id" v-for="post in posts">
+								<h2 class="blog__title">{{ post.title }}</h2>
+								<time class="blog__date">{{ post.created_at | correctDate}}</time>
+								<div class="blog__text text-content" v-html="post.content"></div>
+							</li>
+						</ul>
 					</main>
 				</section>
 			</div>
@@ -138,6 +119,32 @@
 				</div>
 			</footer>
 		</div>
-		<script src="./about.bundle.js"></script>
+		<script type="text/x-template" id="skills-list">
+			<ul class="skills-list">
+				<li class="skills-list__item" v-for="skill in skills">
+					<skills-row :skill="skill"></skills-row>
+				</li>
+			</ul>
+		</script>
+		<script type="text/x-template" id="skills-row">
+			<div class="skills-row">
+				<div class="skills-row__title">{{skill.skillsGroup}}</div>
+				<ul class="skills-row__list">
+					<li class="skills-row__item" v-for="(skillPercents, skillName) in skill.skills">
+						<skill :skillName="skillName" :skillPercents="skillPercents"></skill>
+					</li>
+				</ul>
+			</div>
+		</script>
+		<script type="text/x-template" id="skill">
+			<div class="skill">
+				<svg class="skill__figure" viewBox="0 0 100 100" preserveAspectRatio="none">
+					<circle class="skill__circle skill__circle_under" cx="50" cy="50" r="40"></circle>
+					<circle class="skill__circle skill__circle_above" cx="50" cy="50" r="40" ref="color-circle"></circle>
+				</svg>
+				<div class="skill__title">{{ skillName }}</div>
+			</div>
+		</script>
+		<script src="./blog.bundle.js"></script>
 	</body>
 </html>

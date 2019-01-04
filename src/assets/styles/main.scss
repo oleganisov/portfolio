@@ -1,5 +1,6 @@
-@import './layout/_mixin.scss';
 @import 'normalize.css';
+@import "font-awesome/css/font-awesome.css";
+@import './layout/_mixin.scss';
 @import './layout/fonts.scss';
 @import './layout/base.scss';
 @import './blocks/*.scss';

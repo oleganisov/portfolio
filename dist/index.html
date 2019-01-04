@@ -9,49 +9,88 @@
 		<link rel="stylesheet" href="main.min.css">
 	</head>
 	<body>
-		<div class="wrapper wrapper-intro">
-			<div class="intro">
-				<div class="intro__avatar">
-					<div class="avatar">
-						<div class="avatar__pic"><img class="avatar__img" src="./assets/images/photo.png" alt="Photo"/></div>
-						<div class="avatar__desc">
-							<h2 class="avatar__name ">Олег Анисов</h2>
-							<p class="avatar__info">Личный сайт веб разработчика</p>
-						</div>
-					</div>
-					<div class="intro__social">
-						<div class="social">
-							<ul class="social__list">
-								<li class="social__item"><a class="social__link social__link-vk" href="#">
-										<svg class="social__icon social__icon--blue">
-											<use xlink:href="./assets/images/icons/sprite.svg#vk"></use>
-										</svg></a></li>
-								<li class="social__item"><a class="social__link social__link-github" href="#">
-										<svg class="social__icon social__icon--blue">
-											<use xlink:href="./assets/images/icons/sprite.svg#github"></use>
-										</svg></a></li>
-								<li class="social__item"><a class="social__link social__link-in" href="#">
-										<svg class="social__icon social__icon--blue">
-											<use xlink:href="./assets/images/icons/sprite.svg#in"></use>
-										</svg></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="intro__menu">
-					<nav class="intro-nav">
-						<ul class="intro-nav__list">
-							<li class="intro-nav__item"><a class="intro-nav__link" href="works.html">Мои работы</a></li>
-							<li class="intro-nav__item"><a class="intro-nav__link" href="about.html">Обо мне</a></li>
-							<li class="intro-nav__item"><a class="intro-nav__link" href="blog.html">Блог</a></li>
-						</ul>
-					</nav>
+		<div class="content content--welcome">
+			<header class="header header--welcome"><a class="btn" href="#" id="to-auth">Авторизоваться</a></header>
+			<div class="content__bg parallax-block_mouse parallax-block">
+				<div class="parallax-block__layer">
+					<picture>
+						<source class="img-responsive parallax-block__img" type="image/webp" srcset="./assets/images/bg/index/no_bg_webp.webp"/>
+						<source class="img-responsive parallax-block__img" media="(max-width: 992px )" srcset="assets/images/bg/index/no_bg_tablet.png"/><img class="img-responsive parallax-block__img" src="./assets/images/bg/index/no_bg.png" alt=""/>
+					</picture>
 				</div>
 			</div>
-		</div>
-		<div class="auth-btn"><a class="btn">Авторизоваться</a></div>
-		<div class="copyright-block">
-			<p>© Олег Анисов | Создано с любовью в LoftSchool | 2019</p>
+			<div class="flip" id="flip-container">
+				<div class="index-card flip__elem">
+					<div class="index-card__main">
+						<div class="avatar">
+							<div class="avatar__pic"><img class="avatar__img" src="./assets/images/photo.png" alt="Photo"/></div>
+							<div class="avatar__desc">
+								<h2 class="avatar__name ">Олег Анисов</h2>
+								<p class="avatar__info">Личный сайт веб разработчика</p>
+							</div>
+						</div>
+						<div class="index-card__social">
+							<div class="social">
+								<ul class="social__list">
+									<li class="social__item"><a class="social__link social__link-vk" href="#">
+											<svg class="social__icon social__icon--blue">
+												<use xlink:href="./assets/images/icons/sprite.svg#vk"></use>
+											</svg></a></li>
+									<li class="social__item"><a class="social__link social__link-github" href="#">
+											<svg class="social__icon social__icon--blue">
+												<use xlink:href="./assets/images/icons/sprite.svg#github"></use>
+											</svg></a></li>
+									<li class="social__item"><a class="social__link social__link-in" href="#">
+											<svg class="social__icon social__icon--blue">
+												<use xlink:href="./assets/images/icons/sprite.svg#in"></use>
+											</svg></a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="index-card__bottom">
+						<nav class="index-nav">
+							<ul class="index-nav__list">
+								<li class="index-nav__item"><a class="index-nav__link" href="works.html">Мои работы</a></li>
+								<li class="index-nav__item"><a class="index-nav__link" href="about.html">Обо мне</a></li>
+								<li class="index-nav__item"><a class="index-nav__link" href="blog.html">Блог</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<form class="index-card flip__elem flip__elem_back" method="POST" id="sign-in">
+					<div class="index-card__main">
+						<h2 class="index-card__title">Авторизуйтесь</h2>
+						<div class="index-card__form">
+							<div class="login-input index-card__input"><span class="login-input__icon "><i class="fa fa-user" aria-hidden="true"></i></span>
+								<input class="login-input__input" id="user-login" type="text" placeholder="Логин" name="user-login" required="required"/>
+							</div>
+							<div class="login-input index-card__input"><span class="login-input__icon "><i class="fa fa-key" aria-hidden="true"></i></span>
+								<input class="login-input__input" id="user-password" type="password" placeholder="Пароль" name="user-password" required="required"/>
+							</div>
+							<label class="checkbox index-card__check">
+								<input class="checkbox__input" type="checkbox" name="check_first" id="user-check-1" required="required"/><span class="checkbox__span"><i class="fa fa-check" aria-hidden="true"></i></span><span class="checkbox__title">Я человек</span>
+							</label>
+							<p class="index-card__small">Вы точно не робот?</p>
+							<div class="index-card__radios">
+								<label class="radio index-card__radio">
+									<input class="radio__input" type="radio" name="check_second" value="y"/><span class="radio__span"><i class="fa fa-circle" aria-hidden="true"></i></span><span class="radio__title">Да</span>
+								</label>
+								<label class="radio index-card__radio">
+									<input class="radio__input" type="radio" name="check_second" value="n"/><span class="radio__span"><i class="fa fa-circle" aria-hidden="true"></i></span><span class="radio__title">Не уверен</span>
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="index-card__bottom">
+						<button class="index-card__button button-fill" type="reset" id="log-reset">На Главную</button>
+						<button class="index-card__button button-fill" type="submit" id="log-submit">Войти</button>
+					</div>
+				</form>
+			</div>
+			<div class="footer footer--welcome">
+				<p class="footer__copyright footer__copyright--welcome">© Олег Анисов | Создано с любовью в LoftSchool | 2019</p>
+			</div>
 		</div>
 		<script src="auth.bundle.js"></script>
 	</body>

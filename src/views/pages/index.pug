@@ -1,15 +1,32 @@
 extends ../auth.layout.pug
 
 block content
-  .wrapper.wrapper-intro
-    .intro
-      .intro__avatar
+  header.header.header--welcome
+    a(href="#")#to-auth.btn='Авторизоваться'
+  +parallax-block('content__bg parallax-block_mouse')
+  .flip#flip-container
+    .index-card.flip__elem
+      .index-card__main
         +avatar('', 'Олег Анисов', 'Личный сайт веб разработчика')
-        .intro__social
+        .index-card__social
           +social(['vk','github','in'],'social__icon--blue')
-      .intro__menu
-        +menu(menu_index,'intro-nav')
-  .auth-btn
-    a.btn='Авторизоваться'
-  .copyright-block
-    p="© Олег Анисов | Создано с любовью в LoftSchool | 2019"
+      .index-card__bottom
+        +menu(menu_index,'index-nav')
+
+    form(method="POST" id='sign-in').index-card.flip__elem.flip__elem_back
+      .index-card__main
+        h2.index-card__title Авторизуйтесь
+        .index-card__form
+          +logInput("fa-user", "text", "Логин", "", "index-card__input", "user-login")
+          +logInput("fa-key", "password", "Пароль", "", "index-card__input", "user-password")
+          +checkbox("check_first", "Я человек", "index-card__check", "user-check-1")
+          p.index-card__small Вы точно не робот?
+          .index-card__radios
+            +radio( "check_second","Да", "index-card__radio", "y")
+            +radio( "check_second","Не уверен", "index-card__radio", "n")
+      .index-card__bottom
+        button(type="reset" id="log-reset" class="").index-card__button.button-fill На Главную
+        button(type="submit" id="log-submit").index-card__button.button-fill Войти
+
+  .footer.footer--welcome
+    p.footer__copyright.footer__copyright--welcome="© Олег Анисов | Создано с любовью в LoftSchool | 2019"

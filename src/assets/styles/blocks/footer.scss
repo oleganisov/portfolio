@@ -10,12 +10,8 @@
       grid-template: "left left" 35% "center right" 1fr / 1fr 1fr;
     }
     @include phones {
-      grid-template:
-      "left" 1fr
-      "center" 1fr
-      "right" 1fr / 1fr;
+      grid-template: "left" 1fr "center" 1fr "right" 1fr / 1fr;
     }
-    
   }
   &__left {
     grid-area: left;
@@ -33,7 +29,7 @@
         bottom: -10px;
         width: 99%;
         height: 1px;
-        @include phones{
+        @include phones {
           bottom: 0;
         }
       }
@@ -123,10 +119,14 @@
     }
   }
   &__copyright {
+    font-weight: 300;
     text-align: center;
     line-height: 35px;
     @include phones {
       line-height: 30px;
+    }
+    &--welcome {
+      padding: 40px 0;
     }
   }
 }

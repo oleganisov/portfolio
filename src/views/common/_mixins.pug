@@ -42,3 +42,31 @@ mixin triangles(className)
 mixin ham-btn
   .ham-btn#ham_btn
     .ham-bar
+
+mixin parallax-block(className)
+  div(class=`${className} parallax-block`)
+    .parallax-block__layer
+      picture
+        source( type="image/webp" srcset="./assets/images/bg/index/no_bg_webp.webp").img-responsive.parallax-block__img
+        source(media="(max-width: 992px )", srcset="assets/images/bg/index/no_bg_tablet.png").img-responsive.parallax-block__img
+        img(src="./assets/images/bg/index/no_bg.png", alt="").img-responsive.parallax-block__img
+
+mixin logInput(iconClass, typeInput, placeholderInput, subclass, inputClass, name)
+  div(class="login-input " + inputClass)
+    span(class="login-input__icon "+subclass)
+      i(aria-hidden="true" class="fa "+iconClass)
+    input(id=name type=typeInput, placeholder=placeholderInput name=name required).login-input__input
+
+mixin checkbox(name, title, inputClass, id)
+  label(class="checkbox " + inputClass)
+    input(type="checkbox", name=name, id=id, class="checkbox__input" required)
+    span.checkbox__span
+      i(aria-hidden="true" class="fa fa-check")
+    span.checkbox__title= title
+
+mixin radio(name, title, inputClass, value)
+  label(class="radio " + inputClass)
+    input(id=id, type="radio", name=name, class="radio__input" value=value)
+    span.radio__span
+      i(aria-hidden="true" class="fa fa-circle")
+    span.radio__title= title

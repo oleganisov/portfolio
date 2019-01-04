@@ -1,7 +1,6 @@
 .header {
   min-height: 650px;
   height: 100vh;
-  background-image: url('./assets/images/bg_1800.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -19,5 +18,16 @@
     bottom: 0;
     left: 0;
     right: 0;
+  }
+  &--welcome {
+    flex-direction: row;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 24px 100px;
+    height: auto;
+    min-height: auto;
   }
 }

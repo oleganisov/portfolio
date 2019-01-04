@@ -9,7 +9,7 @@ block headerAvatar
     +avatar('', 'Олег Анисов', 'Личный сайт веб разработчика',true)
 
 block headerBottom
-  a.btn-next(href="#myworks")
+  a.btn-next(href="#slider")
     +icon('portf_arrow_down','btn-next__ico')
 
 block trianglesBottom
@@ -23,26 +23,8 @@ block scripts
   script(src='./works.bundle.js')
 
 block content
-  section.works#myworks
-    .works__content
-      .works__slider
-        .slider
-          ul.slider__list
-            li.slider__item
-              .slider__item-description
-                h2.title-h2.slider__item-title Сайт школы онлайн образования
-                .slider__item-technologies HTML , CSS, JavaScript
-                .slider__btn
-                  a.btn-slider Посмотреть сайт
-              .slider__item-top
-                .slider__item-image
-                  img.slider__item-pic(src="./assets/images/slide1.png")
-              .slider__item-bottom
-                .slider__item-nav
-                  .slider__item-prev
-                    +icon('portf_arrow_down', 'slider__icon')
-                  .slider__item-next
-                    +icon('portf_arrow_up', 'slider__icon')
+  .slider-container#slider
+    #slider-component
   section.feeds
     .feeds__content
       .feeds__title
@@ -83,5 +65,5 @@ block content
               .form__btns
                 button.form__button.form__button-submit(type='submit') Отправить
                 button.form__button.form__button-clear(type='clear') Очистить
-      a.btn-prev(href="#myworks")
+      a.btn-prev(href="#slider")
         +icon('portf_arrow_up', 'btn-prev__ico')

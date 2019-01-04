@@ -4,6 +4,7 @@
 		<meta charset="utf-8">
 		<meta content="ie=edge" http-equiv="x-ua-compatible">
 		<meta content="width=device-width, initial-scale=1" name="viewport">
+		<link rel="icon" href="./assets/images/fav_night.png" type="image/png">
 		<title>Portfolio | Обо мне</title>
 		<link rel="stylesheet" href="main.min.css">
 	</head>
@@ -202,6 +203,41 @@
 					<circle class="skill__circle skill__circle_above" cx="50" cy="50" r="40" ref="color-circle"></circle>
 				</svg>
 				<div class="skill__title">{{ skillName }}</div>
+			</div>
+		</script>
+		<script type="text/x-template" id="slider-root">
+			<div class="slider">
+				<info :work="currentWork"></info>
+				<display :work="currentWork"></display>
+				<btns :works="works" :index="currentIndex" @slide="handleSlide"></btns>
+			</div>
+		</script>
+		<script type="text/x-template" id="slider-info">
+			<div class="slider__info-container">
+				<div class="slider__info">
+					<div class="slider__info-title">
+						<div class="title-h2">{{work.title}}</div>
+						<div class="slider__info-skills">{{work.skills}}</div>
+					</div>
+					<div class="slider__info-button"><a class="btn-slider" :href="work.link" target="_blank">Посмотреть сайт</a></div>
+				</div>
+			</div>
+		</script>
+		<script type="text/x-template" id="slider-display">
+			<div class="slider__display"><img class="slider__big-pic" :src="work.photo" alt=""></div>
+		</script>
+		<script type="text/x-template" id="slider-btns">
+			<div class="slider__buttons">
+				<div class="slider__button slider__button--prev" @click="slide('prev')">
+					<div class="slider__button-img-container">
+						<div class="slider__button-img-wrap"><img class="slider__button-pic" :src="prevButtonsWorks[index].photo" alt=""></div>
+					</div>
+				</div>
+				<div class="slider__button slider__button--next" @click="slide('next')">
+					<div class="slider__button-img-container">
+						<div class="slider__button-img-wrap"><img class="slider__button-pic" :src="nextButtonsWorks[index].photo" alt=""></div>
+					</div>
+				</div>
 			</div>
 		</script>
 		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>

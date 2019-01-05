@@ -11,13 +11,14 @@
 	<body>
 		<div class="content content--welcome">
 			<header class="header header--welcome"><a class="btn" href="#" id="to-auth">Авторизоваться</a></header>
-			<div class="content__bg parallax-block_mouse parallax-block">
+			<div class="parallax-block">
 				<div class="parallax-block__layer">
-					<picture>
-						<source class="img-responsive parallax-block__img" type="image/webp" srcset="./assets/images/bg/index/no_bg_webp.webp"/>
-						<source class="img-responsive parallax-block__img" media="(max-width: 992px )" srcset="assets/images/bg/index/no_bg_tablet.png"/><img class="img-responsive parallax-block__img" src="./assets/images/bg/index/no_bg.png" alt=""/>
-					</picture>
+					<video class="parallax-block__video" autoplay="autoplay" loop="loop">
+						<source src="./assets/video/night.mp4" type="video/mp4">
+					</video>
 				</div>
+				<div class="parallax-block__layer"><img class="parallax-block__img" src="./assets/images/bg/index/mountain.png" alt="mountain"></div>
+				<div class="parallax-block__layer"><img class="parallax-block__img" src="./assets/images/bg/index/forest.png" alt="forest"></div>
 			</div>
 			<div class="flip" id="flip-container">
 				<div class="index-card flip__elem">

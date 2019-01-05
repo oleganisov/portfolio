@@ -13,6 +13,9 @@
     margin-bottom: 5%;
     padding: 28px 31px 0;
   }
+  &__avatar{
+    position: relative;
+  }
   &__triangles {
     position: absolute;
     bottom: 0;
@@ -29,5 +32,8 @@
     padding: 24px 100px;
     height: auto;
     min-height: auto;
+  }
+  &__bg{
+    background-image: url('./assets/images/bg_1800.jpg');
   }
 }

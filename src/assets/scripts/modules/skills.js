@@ -1,5 +1,6 @@
 import Vue from 'vue';
 
+const skills = () => {
 const skill = {
   template: "#skill",
   props: {
@@ -46,3 +47,6 @@ new Vue({
   },
   template: "#skills-list"
 });
+};
+
+export default skills

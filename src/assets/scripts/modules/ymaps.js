@@ -1,4 +1,4 @@
-module.exports = function () {
+const yandexmaps = ()=> {
   const ymaps=window.ymaps;
   ymaps.ready(function () {
     const map = new ymaps.Map("yandex_map", {
@@ -21,3 +21,5 @@ module.exports = function () {
     map.geoObjects.add(placemark);
   });
 }
+
+export default yandexmaps;

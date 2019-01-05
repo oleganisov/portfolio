@@ -1,28 +1,29 @@
 .parallax-block {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: -1;
   background-color: #223b65;
+  z-index: -1;
   overflow: hidden;
   &__layer {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-    width: 180%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    will-change: transform;
   }
   &__img {
     position: absolute;
     bottom: 0;
-    will-change: transform;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 110%;
   }
-  &_mouse {
-    .parallax-block__layer {
-      width: 120%;
-    }
+  &__video{
+    min-width: 100%;
+    min-height: 100%;
   }
 }

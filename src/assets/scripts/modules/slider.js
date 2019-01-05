@@ -1,5 +1,6 @@
 import Vue from "vue";
 
+const slider = () => {
 const info = {
   template: "#slider-info",
   props: {
@@ -100,3 +101,5 @@ new Vue({
   },
   template: "#slider-root"
 });
+};
+export default slider

@@ -1,4 +1,5 @@
 import switchCards from './modules/switchCards';
+import {parallaxMouse} from './modules/parallax';
 
 document.addEventListener('DOMContentLoaded', () => {
     
@@ -8,4 +9,5 @@ document.addEventListener('DOMContentLoaded', () => {
     
     //Swipping cards 'welcome' an 'authorization'
     switchCards(linkAuth, flipContainer, signInReset);
+    parallaxMouse();
 });

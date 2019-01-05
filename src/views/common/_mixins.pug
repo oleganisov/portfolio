@@ -43,14 +43,6 @@ mixin ham-btn
   .ham-btn#ham_btn
     .ham-bar
 
-mixin parallax-block(className)
-  div(class=`${className} parallax-block`)
-    .parallax-block__layer
-      picture
-        source( type="image/webp" srcset="./assets/images/bg/index/no_bg_webp.webp").img-responsive.parallax-block__img
-        source(media="(max-width: 992px )", srcset="assets/images/bg/index/no_bg_tablet.png").img-responsive.parallax-block__img
-        img(src="./assets/images/bg/index/no_bg.png", alt="").img-responsive.parallax-block__img
-
 mixin logInput(iconClass, typeInput, placeholderInput, subclass, inputClass, name)
   div(class="login-input " + inputClass)
     span(class="login-input__icon "+subclass)

@@ -11,10 +11,10 @@
     line-height: 34px;
     color: #fff;
     text-align: center;
-    margin-bottom: 32px;
+    margin-bottom: 40px;
   }
   &__social {
-    padding-top: 40px;
+    padding-top: 25px;
   }
   &__bottom {
     display: flex;
@@ -36,16 +36,22 @@
   }
   &__input {
     margin-bottom: 20px;
+    &:nth-child(2){
+      margin-bottom: 0;
+    }
+  }
+  &__check{
+    padding-top: 21px;
+    margin-bottom: 22px;
   }
   &__small {
     color: rgba(#fff, 0.85);
     font-weight: 700;
-    margin-top: 16px;
     text-align: center;
+    margin-bottom: 22px;
   }
   &__radios {
     display: flex;
     justify-content: center;
-    margin-top: 12px;
   }
 }

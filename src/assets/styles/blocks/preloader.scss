@@ -1,0 +1,31 @@
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background-color: $blue-dark;
+  background-image: url('./assets/images/bg/night_prel_bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  &-hide {
+    opacity: 0;
+    z-index: 0;
+  }
+  &__svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    fill: #fff;
+    stroke: #fff;
+  }
+  &__text {
+    text-align: center;
+  }
+  &__circle-external {
+    stroke-dasharray: 157;
+  }
+}

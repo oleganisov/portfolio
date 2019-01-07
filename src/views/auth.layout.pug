@@ -11,7 +11,10 @@ html(lang="ru")
     title Portfolio | welcome page
     link(rel="stylesheet", href="main.min.css")
   body
+    #preloader-container
     div(class="content content--welcome")
       block content
+    include ./components/templates/preloader
 
     script(src="auth.bundle.js")
+    //- script(src='./bootloader.bundle.js')

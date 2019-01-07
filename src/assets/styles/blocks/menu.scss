@@ -37,6 +37,9 @@
     &:last-child {
       margin-right: initial;
     }
+    @include laptop{
+      margin-right: 30px;
+    }
     @include tablets{
       margin-right: 20px;
     }

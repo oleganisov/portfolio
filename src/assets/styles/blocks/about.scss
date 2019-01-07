@@ -9,22 +9,37 @@
     flex-direction: column;
     width: 50%;
     background-color: $white;
+    padding: 10px 20px 0 0;
+    @include laptop{
+      padding: initial;
+    }
     @include tablets{
       width: 100%;
     }
     &-content {
-      width: 60%;
-      margin: 0 auto;
+      display: flex;
+      @include laptop{
+        flex-direction: column;
+        align-items: center;
+      }
       @include phones{
         margin: initial;
         width: 100%;
       }
     }
     &-title{
-      margin-bottom: 60px;
-      @include tablets{
+      width: 45%;
+      @include laptop{
         margin-bottom: 50px;
+      }
+      @include tablets{
         padding-top: 50px;
+      }
+    }
+    &-user{
+      width: 55%;
+      @include laptop{
+        width: 80%;
       }
     }
   }

@@ -1,8 +1,12 @@
 .footer {
   color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   &__main {
     display: grid;
-    grid-template: "left center right" 1fr / 1fr 1fr 1fr;
+    grid-template: "left center right" 1fr / 30% 40% 30%;
     background-color: rgba($gray, 0.85);
     padding: 30px 30px;
     @include tablets {
@@ -16,6 +20,7 @@
   &__left {
     grid-area: left;
     position: relative;
+    padding-right: 30px;
     @include tablets {
       padding-left: initial;
       margin-bottom: 20px;
@@ -37,7 +42,7 @@
   }
   &__center {
     grid-area: center;
-    padding-left: 30px;
+    padding: 0 30px;
     position: relative;
     @include tablets {
       padding-left: initial;
@@ -129,4 +134,8 @@
       padding: 40px 0;
     }
   }
+}
+
+.page-blog .footer {
+  position: static;
 }

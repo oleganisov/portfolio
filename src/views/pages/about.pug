@@ -23,7 +23,7 @@ block content
       .about__left-content
         .about__left-title
           h1.title-h1.title-h1--about= title
-        .user-desc
+        .about__left-user.user-desc
           .user-desc__pic
             img.user-desc__avatar(src='./assets/images/photo_user.png' alt="фотография")
           .user-desc__data
@@ -40,7 +40,6 @@ block content
           p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
         .skills#skills-container
   section.map
-    .map__ymaps#yandex_map
     .map__data
       .contacts
         .contacts__title
@@ -52,4 +51,5 @@ block content
                 .contacts__item-icon
                   +icon(`${item[0]}`, 'contacts__item-icon-img')
                 a.contacts__item-title(href=(item[2] != '') ? `${item[2]}` : '#') #{item[1]}
+    .map__ymaps#yandex_map
   

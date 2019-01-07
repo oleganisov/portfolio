@@ -7,8 +7,8 @@
     &__pic {
       display: block;
       margin: 0 auto;
-      width: 443px;
-      height: 391px;
+      max-width: 443px;
+      max-height: 391px;
       overflow: hidden;
       @include phones {
         width: 100%;

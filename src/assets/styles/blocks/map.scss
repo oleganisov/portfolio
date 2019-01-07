@@ -1,17 +1,32 @@
 .map{
-  background-image: url('./assets/images/bg_map_1800.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 	position: relative;
   height: 100vh;
+  @include phones{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
   &__ymaps{
+    background-image: url('./assets/images/bg_map_1800.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 100%;
+    @include phones{
+      height: 850px;
+    }
   }
   &__data{
+    z-index: 1;
     position: absolute;
-    top: 50%;
+    top: 20%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translateX(-50%);
+    @include phones{
+      position: static;
+      top: 0;
+      left: 0;
+      transform: initial;
+    }
   }
 }

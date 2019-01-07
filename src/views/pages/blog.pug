@@ -28,3 +28,9 @@ block content
           h2.blog__title {{ post.title }}
           time.blog__date {{ post.created_at | correctDate}}
           .blog__text.text-content(v-html="post.content")
+    nav.blog-menu#blog_menu
+      ul.blog-menu__list
+        li(v-for="post in posts").blog-menu__item
+          a(:href="'#post-'+post.id").blog-menu__link {{ post.title }}
+      .blog-btn#blog_btn
+        .swipe-btn

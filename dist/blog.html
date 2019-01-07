@@ -71,6 +71,14 @@
 							</li>
 						</ul>
 					</main>
+					<nav class="blog-menu" id="blog_menu">
+						<ul class="blog-menu__list">
+							<li class="blog-menu__item" v-for="post in posts"><a class="blog-menu__link" :href="'#post-'+post.id">{{ post.title }}</a></li>
+						</ul>
+						<div class="blog-btn" id="blog_btn">
+							<div class="swipe-btn"></div>
+						</div>
+					</nav>
 				</section>
 			</div>
 			<footer class="footer">
@@ -109,10 +117,10 @@
 						</div>
 					</div>
 					<div class="footer__right">
-						<div class="footer__skype">skype_kdn</div>
-						<div class="footer__mail">astahov@gmail.com</div>
-						<phone class="footer__phone">+7 931 200 93 24</phone>
-						<address class="footer__adr">г. Новосибирск, ул. Инская, д.4</address>
+						<div class="footer__skype">anisov13</div>
+						<div class="footer__mail">anisov@obninsk.ru</div>
+						<phone class="footer__phone">+7 919 991 75 93</phone>
+						<address class="footer__adr">г. Обнинск, ул. Энгельса, д.2</address>
 					</div>
 				</div>
 				<div class="footer__bottom">

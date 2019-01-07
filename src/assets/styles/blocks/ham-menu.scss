@@ -9,7 +9,7 @@
   z-index: 5;
   &::before {
     z-index: -1;
-    background-color: rgba(#183669, 0.85);
+    background-color: rgba(#253468, 0.85);
     content: '';
     display: block;
     position: absolute;
@@ -21,7 +21,7 @@
   }
   &::after {
     z-index: -1;
-    background-color: rgba(#183669, 0.85);
+    background-color: rgba(#253468, 0.85);
     content: '';
     display: block;
     position: absolute;
@@ -40,12 +40,19 @@
     opacity: 0;
     transform: scale3d(0, 0, 0);
     transition: opacity 1s, transform 1s;
+    @include tablets{
+      padding-top: 25%;
+    }
+    @include phones{
+      padding-top: 35%;
+    }
   }
   &__item {
-    text-transform: uppercase;
-    font-family: $font-title;
-    font-size: 63px;
+    @include bigTitle;
     margin-bottom: 3%;
+    @include tablets{
+      margin-bottom: 8%;
+    }
     &:last-child {
       margin-bottom: initial;
     }
@@ -58,6 +65,9 @@
     &::after {
       position: absolute;
       bottom: -15%;
+      @include tablets{
+        bottom: -35%;
+      }
       background-color: #fff;
       content: '';
       display: block;

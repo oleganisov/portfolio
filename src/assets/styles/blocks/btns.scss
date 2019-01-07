@@ -59,7 +59,6 @@
 
 .btn-prev {
   @extend %btn_arrow;
-  bottom: 5%;
   &:hover .btn-prev__ico {
     opacity: 1;
   }

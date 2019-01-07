@@ -10,10 +10,17 @@
     position: absolute;
     top: -10%;
     opacity: 0.3;
+    @include phones {
+      top: -5%;
+    }    
   }
   &__svg {
     width: 400px;
     height: 200px;
+    @include phones {
+      width: 320px;
+      height: 160px;
+    }
   }
   &__pic {
     margin-bottom: 35px;

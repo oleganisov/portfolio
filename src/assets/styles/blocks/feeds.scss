@@ -3,17 +3,29 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-	position: relative;
-  padding-bottom: 155px;
+  position: relative;
+  padding-bottom: 250px;
+  @include phones {
+    padding-bottom: 370px;
+  }
   &__title {
     padding-top: 6%;
     margin-bottom: 5%;
-    @include phones{
+    @include phones {
       margin-bottom: 40px;
     }
-    @include smallphones{
+    @include smallphones {
       padding-top: 25px;
       margin-bottom: 20px;
+    }
+  }
+  &__form {
+    margin-bottom: 70px;
+    @include phones {
+      margin-bottom: 45px;
+    }
+    @include smallphones {
+      margin-bottom: 30px;
     }
   }
 }

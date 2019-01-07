@@ -56,4 +56,49 @@
     color: rgba(8, 60, 150, 0.702);
     margin-bottom: 20px;
   }
+  &-menu{
+    visibility: hidden;
+    position: fixed;
+    z-index: 5;
+    background-color: rgb(37, 52, 104);
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    transition: visibility .5s, width .5s;
+    &.is-active{
+      visibility: visible;
+      width: 300px;
+    }
+    &.is-active &__list{
+      opacity: 1;
+    }
+    &__list{
+      padding: 0 20px;
+      opacity: 0;
+      transition: opacity .5s;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    &__item{
+      margin-bottom: 40px;
+      text-align: right;
+    }
+    &__link{
+      color: #fff;
+    }
+  }
+  &-btn{
+    visibility: hidden;
+    position: absolute;
+    z-index: -1;
+    right: -15px;
+    top:50%;
+    transform: translateY(-50%);
+    &.is-active{
+      visibility: visible;
+    }
+  }
 }

@@ -4,6 +4,8 @@
   right: 0;
   top: 0;
   bottom: 0;
+  visibility: hidden;
+  transition: visibility 1s;
   z-index: 5;
   &::before {
     z-index: -1;
@@ -36,7 +38,7 @@
     justify-content: center;
     align-items: center;
     opacity: 0;
-    transform: scale3d(0,0,0);
+    transform: scale3d(0, 0, 0);
     transition: opacity 1s, transform 1s;
   }
   &__item {
@@ -66,7 +68,6 @@
     }
     &:hover::after {
       opacity: 1;
-      
     }
   }
   &.is-active::before {
@@ -75,10 +76,13 @@
   &.is-active::after {
     left: 50%;
   }
+  &.is-active {
+    visibility: visible;
+  }
   &.is-active &__list {
+    visibility: visible;
     opacity: 1;
-    transform: scale3d(1,1,1);
+    transform: scale3d(1, 1, 1);
     transition: opacity 1s, transform 1s;
   }
 }
-

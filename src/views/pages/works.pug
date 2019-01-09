@@ -9,7 +9,7 @@ block headerAvatar
     +avatar('', 'Олег Анисов', 'Личный сайт веб разработчика',true)
 
 block headerBottom
-  a.btn-next(href="#slider")
+  a.btn-next#btn_next(href="#slider")
     +icon('portf_arrow_down','btn-next__ico')
 
 block trianglesBottom
@@ -68,5 +68,5 @@ block content
               .form__btns
                 button.form__button.form__button-submit(type='submit') Отправить
                 button.form__button.form__button-clear(type='clear') Очистить
-      a.btn-prev(href="#slider")
+      a.btn-prev#btn_prev(href="#slider")
         +icon('portf_arrow_up', 'btn-prev__ico')

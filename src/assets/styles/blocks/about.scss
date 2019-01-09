@@ -1,0 +1,28 @@
+.about {
+  position: relative;
+  display: flex;
+  &__left {
+    display: inline-flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: $white;
+    &-content {
+      width: 60%;
+      margin: 0 auto;
+    }
+  }
+  &__right {
+    display: inline-flex;
+    flex-direction: column;
+    width: 50%;
+    background-color: $beige;
+    &-content {
+      width: 90%;
+      margin: 0 auto;
+    }
+  }
+  &__triangle {
+    width: 100%;
+    margin-top: -150px;
+  }
+}

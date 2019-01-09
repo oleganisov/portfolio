@@ -1,0 +1,13 @@
+.triangle {
+  height: 150px;
+  width: 100%;
+  &_fill_white {
+    fill: $white;
+  }
+  &_fill_beige {
+    fill: $beige;
+  }
+  &_fill_gray {
+    fill: rgba($gray,0.85);
+  }
+}

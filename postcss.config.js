@@ -7,6 +7,7 @@ module.exports = {
     require("postcss-easy-import")({
       extensions: ".scss"
     }),
+    require('postcss-extend-rule')(),
     require("autoprefixer")({
       browsers: ["last 2 versions"],
       cascade: false
@@ -23,6 +24,7 @@ module.exports = {
       path: "./src/assets/images/icons"
     }),
     require("postcss-svgo"),
+    require("postcss-plugin-px2rem")({rootValue: 16,selectorBlackList: [/^body$/]}),
     require("cssnano")()
   ]
 };

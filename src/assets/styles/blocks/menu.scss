@@ -1,0 +1,48 @@
+.intro-nav {
+  &__list {
+    display: flex;
+    text-align: center;
+  }
+  &__item {
+    padding: 15px 0;
+    width: calc(100%/3);
+    background-color: rgba($blue-light, 0.851);
+    position: relative;
+    transition: background-color .3s;
+    &::before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: "";
+      display: block;
+      height: 100%;
+      width: 1px;
+      background-color: #fff;
+    }
+    &:first-child::before {
+      display: none;
+    }
+    &:hover {
+      background-color: rgba($blue-dark, 0.851);
+      cursor: pointer;
+    }
+  }
+  &__link {
+    color: #fff;
+  }
+}
+
+.footer-nav {
+  &__list {
+    display: flex;
+  }
+  &__item {
+    margin-right: 40px;
+    &:last-child {
+      margin-right: initial;
+    }
+  }
+  &__link {
+    color: #fff;
+  }
+}

@@ -1,0 +1,9 @@
+.feeds {
+	background: url('./assets/images/bg_feed_1200.png') top center/cover no-repeat;
+	position: relative;
+  padding-bottom: 155px;
+  &__title {
+    padding-top: 70px;
+    margin-bottom: 60px;
+  }
+}

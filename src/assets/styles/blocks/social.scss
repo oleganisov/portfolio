@@ -1,0 +1,31 @@
+.social {
+  &__list {
+    display: flex;
+  }
+  &__item {
+    margin-right: 30px;
+    &:last-child {
+      margin-right: initial;
+    }
+  }
+  &__icon {
+    height: 25px;
+    width: 25px;
+    transition: fill .3s;
+    &:hover {
+      fill: $blue-light;
+    }
+  }
+}
+
+.icon-blue {
+  fill: $blue-dark;
+}
+
+.icon-white {
+  fill: #fff;
+}
+
+.icon-gray {
+  fill: $gray-light;
+}

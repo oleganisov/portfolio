@@ -1,6 +1,18 @@
 extends ../auth.layout.pug
 
 block content
-  .hello-world
-    +icon('portfolio_header', 'hello-world__block')
-    .inlined-svg
+  .wrapper.wrapper-intro
+    .intro
+      .intro__avatar.avatar
+        .avatar__pic
+          img.avatar__img(src='./assets/images/photo.png')
+        .avatar__name='Олег Анисов'
+        .avatar__info.intro__info='Личный сайт веб разработчика'
+        .intro__social
+          +social(['vk','github','in'],'icon-blue')
+      .intro__menu
+        +menu(menu_index,'intro-nav')
+  .auth-btn
+    a.btn='Авторизоваться'
+  .copyright-block
+    p="© Олег Анисов | Создано с любовью в LoftSchool | 2019"

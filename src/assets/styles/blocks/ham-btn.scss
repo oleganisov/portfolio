@@ -1,0 +1,44 @@
+%ham_line {
+  background-color: #fff;
+  height: 6px;
+  width: 40px;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.ham-btn {
+  cursor: pointer;
+}
+
+.ham-bar {
+  @extend %ham_line;
+  position: relative;
+  &::before {
+    content: "";
+    @extend %ham_line;
+    position: absolute;
+    top: -15px;
+    transition: transform .3s;
+  }
+  &::after {
+    content: "";
+    @extend %ham_line;
+    position: absolute;
+    bottom: -15px;
+    transition: transform .3s;
+  }
+}
+
+.ham-btn.is-active {
+  .ham-bar {
+    background-color: transparent;
+    &::before {
+      transform: rotate(45deg);
+      top: 0;
+    }
+    &::after {
+      transform: rotate(-45deg);
+      bottom: 0;
+    }
+  }
+}

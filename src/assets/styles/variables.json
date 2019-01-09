@@ -1,9 +1,15 @@
 {
-  "white": "#efeee9",
-  "beige": "#eeebdf",
+  "white": "#f2f0e8",
+  "beige": "#eae8e2",
   "green": "#16c2aa",
   "text-color": "#455a64",
-  "grey": "#373e42",
-  "light-grey": "#dfdcd5",
-  "test" : "#000"
+  "gray-light": "#9e9fa3",
+  "gray": "#1c1f29",
+  "blue-dark" : "#043ea3",
+  "blue-light" : "#004cd1",
+  "laptop":"1200px",
+  "tablets":"768px",
+  "phones":"480px",
+  "smallphones":"320px",
+  "font-title" :"sansus"
 }

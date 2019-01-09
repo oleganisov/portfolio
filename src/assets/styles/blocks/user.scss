@@ -1,0 +1,23 @@
+.user {
+  &-desc__avatar {
+    width: 100%;
+    height: auto;
+  }
+  &-desc__pic {
+    display: block;
+    margin: 0 auto;
+    width: 443px;
+    height: 391px;
+    overflow: hidden;
+  }
+  &-desc__avatar {
+    width: 100%;
+    height: auto;
+  }
+  &-desc__data {
+    padding-top: 35px;
+  }
+  &-desc__title {
+    margin-bottom: 25px;
+  }
+}

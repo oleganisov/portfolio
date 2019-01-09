@@ -1,9 +1,9 @@
 {
-  "name": "advanced-boilerplate",
+  "name": "portfolio",
   "version": "1.0.1",
   "repository": {
     "type": "git",
-    "url": "https://github.com/loftschool/advanced-boilerplate.git"
+    "url": "https://github.com/oleganisov/portfolio.git"
   },
   "description": "",
   "main": "gulpfile.js",
@@ -48,6 +48,7 @@
     "html-webpack-plugin": "^3.2.0",
     "postcss-advanced-variables": "^2.3.3",
     "postcss-easy-import": "^3.0.0",
+    "postcss-extend-rule": "^2.0.0",
     "postcss-inline-svg": "^3.1.1",
     "postcss-loader": "^2.1.5",
     "postcss-nested": "^3.0.0",
@@ -69,10 +70,12 @@
   ],
   "dependencies": {
     "normalize.css": "^7.0.0",
+    "postcss-plugin-px2rem": "^0.8.1",
     "promptly": "^3.0.3",
     "pug": "^2.0.3",
     "request": "^2.87.0",
     "signale": "^1.1.0",
-    "vue": "2.5.13"
+    "vue": "2.5.13",
+    "yarn": "^1.12.3"
   }
 }

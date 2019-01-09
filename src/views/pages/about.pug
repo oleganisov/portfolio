@@ -13,6 +13,10 @@ block headerBottom
     +icon('portf_arrow_down','btn-next__ico')
 block trianglesBottom
 
+
+block templates
+  include ../components/templates/skills
+
 block scripts
   script(src='https://api-maps.yandex.ru/2.1/?lang=ru_RU')
   script(src='./about.bundle.js')
@@ -52,4 +56,3 @@ block content
                   +icon(`${item[0]}`, 'contacts__item-icon-img')
                 a.contacts__item-title(href=(item[2] != '') ? `${item[2]}` : '#') #{item[1]}
     .map__ymaps#yandex_map
-  

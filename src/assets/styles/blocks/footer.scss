@@ -6,9 +6,12 @@
   right: 0;
   &__main {
     display: grid;
-    grid-template: "left center right" 1fr / 30% 40% 30%;
+    grid-template: "left center right" 1fr / 1fr 1fr 1fr;
     background-color: rgba($gray, 0.85);
     padding: 30px 30px;
+    @include laptop {
+      grid-template: "left center right" 1fr / 35% 1fr 25%;
+    }
     @include tablets {
       padding: 15px 15px;
       grid-template: "left left" 35% "center right" 1fr / 1fr 1fr;
@@ -45,7 +48,9 @@
     padding: 0 30px;
     position: relative;
     @include tablets {
-      padding-left: initial;
+      padding: 0 0;
+    }
+    @include phones {
       text-align: center;
     }
     &::before {
@@ -132,6 +137,10 @@
     }
     &--welcome {
       padding: 40px 0;
+      @include smallphones {
+        line-height: 25px;
+        padding: 10px 30px;
+      }
     }
   }
 }

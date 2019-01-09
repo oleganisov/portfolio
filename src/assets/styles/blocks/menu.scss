@@ -21,14 +21,16 @@
     color: #fff;
     display: block;
     padding: 15px 0;
-
   }
 }
 
 .footer-nav {
   &__list {
     display: flex;
-    @include phones{
+    @include tablets {
+      justify-content: flex-start;
+    }
+    @include phones {
       justify-content: center;
     }
   }
@@ -37,13 +39,13 @@
     &:last-child {
       margin-right: initial;
     }
-    @include laptop{
+    @include laptop {
       margin-right: 30px;
     }
-    @include tablets{
+    @include tablets {
       margin-right: 20px;
     }
-    @include smallphones{
+    @include smallphones {
       margin-right: 10px;
     }
   }

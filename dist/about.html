@@ -214,50 +214,6 @@
 				<div class="skill__title">{{ skillName }}</div>
 			</div>
 		</script>
-		<script type="text/x-template" id="slider-root">
-			<div class="slider">
-				<info :work="currentWork"></info>
-				<display :work="currentWork"></display>
-				<btns :works="works" :index="currentIndex" @slide="handleSlide"></btns>
-			</div>
-		</script>
-		<script type="text/x-template" id="slider-info">
-			<div class="slider__info-container">
-				<div class="slider__info">
-					<div class="slider__info-title">
-						<div class="title-h2">{{work.title}}</div>
-						<div class="slider__info-skills">{{work.skills}}</div>
-					</div>
-					<div class="slider__info-button"><a class="btn-slider" :href="work.link" target="_blank">Посмотреть сайт</a></div>
-				</div>
-			</div>
-		</script>
-		<script type="text/x-template" id="slider-display">
-			<div class="slider__display"><img class="slider__big-pic" :src="work.photo" alt=""></div>
-		</script>
-		<script type="text/x-template" id="slider-btns">
-			<div class="slider__buttons">
-				<div class="slider__button slider__button--prev" @click="slide('prev')">
-					<div class="slider__button-img-container">
-						<div class="slider__button-img-wrap"><img class="slider__button-pic" :src="prevButtonsWorks[index].photo" alt=""></div>
-					</div>
-				</div>
-				<div class="slider__button slider__button--next" @click="slide('next')">
-					<div class="slider__button-img-container">
-						<div class="slider__button-img-wrap"><img class="slider__button-pic" :src="nextButtonsWorks[index].photo" alt=""></div>
-					</div>
-				</div>
-			</div>
-		</script>
-		<script type="text/x-template" id="preloader">
-			<div class="preloader" :class="{&quot;preloader-hide&quot;: loadFlag == true}">
-				<svg class="preloader__svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="52.586px" height="63.73px" viewBox="0 0 52.586 63.73" enable-background="new 0 0 52.586 63.73" xml:space="preserve">
-					<text class="preloader__text" transform="matrix(1 0 0 1 12 45)" font-family="'ArialMT'" font-size="20">{{ animatedNumber }}</text>
-					<circle class="preloader__circle preloader__circle-external" fill="none" stroke="#fff" stroke-width="2.5864" stroke-miterlimit="10" cx="26.293" cy="37.438" r="25"></circle>
-					<circle class="preloader__circle preloader__circle-inner" cx="26.293" cy="4.5" r="4.5"></circle>
-				</svg>
-			</div>
-		</script>
 		<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 		<script src="./about.bundle.js"></script>
 	</body>

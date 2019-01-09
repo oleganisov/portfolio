@@ -190,32 +190,6 @@
 				<li class="ham-menu__item"><a class="ham-menu__link" href="index.html">Авторизация</a></li>
 			</ul>
 		</nav>
-		<script type="text/x-template" id="skills-list">
-			<ul class="skills-list">
-				<li class="skills-list__item" v-for="skill in skills">
-					<skills-row :skill="skill"></skills-row>
-				</li>
-			</ul>
-		</script>
-		<script type="text/x-template" id="skills-row">
-			<div class="skills-row">
-				<div class="skills-row__title">{{skill.skillsGroup}}</div>
-				<ul class="skills-row__list">
-					<li class="skills-row__item" v-for="(skillPercents, skillName) in skill.skills">
-						<skill :skillName="skillName" :skillPercents="skillPercents"></skill>
-					</li>
-				</ul>
-			</div>
-		</script>
-		<script type="text/x-template" id="skill">
-			<div class="skill">
-				<svg class="skill__figure" viewBox="0 0 100 100" preserveAspectRatio="none">
-					<circle class="skill__circle skill__circle_under" cx="50" cy="50" r="40"></circle>
-					<circle class="skill__circle skill__circle_above" cx="50" cy="50" r="40" ref="color-circle"></circle>
-				</svg>
-				<div class="skill__title">{{ skillName }}</div>
-			</div>
-		</script>
 		<script type="text/x-template" id="slider-root">
 			<div class="slider">
 				<info :work="currentWork"></info>
@@ -249,15 +223,6 @@
 						<div class="slider__button-img-wrap"><img class="slider__button-pic" :src="nextButtonsWorks[index].photo" alt=""></div>
 					</div>
 				</div>
-			</div>
-		</script>
-		<script type="text/x-template" id="preloader">
-			<div class="preloader" :class="{&quot;preloader-hide&quot;: loadFlag == true}">
-				<svg class="preloader__svg" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="52.586px" height="63.73px" viewBox="0 0 52.586 63.73" enable-background="new 0 0 52.586 63.73" xml:space="preserve">
-					<text class="preloader__text" transform="matrix(1 0 0 1 12 45)" font-family="'ArialMT'" font-size="20">{{ animatedNumber }}</text>
-					<circle class="preloader__circle preloader__circle-external" fill="none" stroke="#fff" stroke-width="2.5864" stroke-miterlimit="10" cx="26.293" cy="37.438" r="25"></circle>
-					<circle class="preloader__circle preloader__circle-inner" cx="26.293" cy="4.5" r="4.5"></circle>
-				</svg>
 			</div>
 		</script>
 		<script src="./works.bundle.js"></script>

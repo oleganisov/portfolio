@@ -12,11 +12,11 @@
     justify-content: space-between;
     margin-bottom: 5%;
     padding: 28px 31px 0;
-    @include tablets{
+    @include tablets {
       margin-bottom: 20%;
     }
   }
-  &__avatar{
+  &__avatar {
     position: relative;
   }
   &__triangles {
@@ -35,8 +35,15 @@
     padding: 24px 100px;
     height: auto;
     min-height: auto;
+    @include tablets {
+      padding: 20px 20px;
+    }
+    @include phones{
+      justify-content: center;
+      padding: 10px 0 0;
+    }
   }
-  &__bg{
+  &__bg {
     background-image: url('./assets/images/bg_1800.jpg');
   }
 }

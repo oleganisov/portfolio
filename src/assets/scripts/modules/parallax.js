@@ -9,9 +9,9 @@ const parallaxMouse = () => {
       const divider = i / 100;
       const positionX = initialX * divider;
       const positionY = initialY * divider;
-      const bottomPosition = (window.innerHeight/2) * divider;
-      const image=layer.firstElementChild;
-      image.style.bottom=`-${bottomPosition}px`
+      const bottomPosition = (window.innerHeight / 2) * divider;
+      const image = layer.firstElementChild;
+      image.style.bottom = `-${bottomPosition}px`
 
       layer.style.transform = `translate(${positionX}px, ${positionY}px)`;
     });
@@ -20,17 +20,17 @@ const parallaxMouse = () => {
   window.addEventListener("mousemove", moveLayers);
 }
 
-const parallaxScroll = () =>{
-  const avatar=document.querySelector('.avatar');
-  const svg=document.querySelector('.avatar__svg');
-  
+const parallaxScroll = () => {
+  const avatar = document.querySelector('.avatar');
+  const svg = document.querySelector('.avatar__svg');
+
   const move = (block, windowScroll, strafeAmount) => {
-    const strafe = -windowScroll/strafeAmount+'%';
+    const strafe = -windowScroll / strafeAmount + '%';
     const transformString = `translate3d(0,${strafe},0)`;
     const style = block.style;
 
-    style.transform=transformString;
-    style.webkitTransform=transformString;
+    style.transform = transformString;
+    style.webkitTransform = transformString;
   };
   const init = wScroll => {
     move(svg, wScroll, 20);
@@ -42,4 +42,7 @@ const parallaxScroll = () =>{
 
 };
 
-export {parallaxMouse, parallaxScroll};
+export {
+  parallaxMouse,
+  parallaxScroll
+};

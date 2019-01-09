@@ -1,5 +1,5 @@
-import preloader from  "./modules/preloader";
+import preloader from "./modules/preloader";
 
-document.addEventListener('DOMContentLoaded',()=>{
+document.addEventListener('DOMContentLoaded', () => {
   preloader();
 });

@@ -16,7 +16,7 @@ const blogNavMenu = () => {
   blogLinks.forEach((link, index) => {
     link.addEventListener('click', (e) => {
       e.preventDefault();
-      smoothScroll(`#${blogPosts[index].id}`, 9000);
+      smoothScroll(`#${blogPosts[index].id}`);
     })
   })
 }

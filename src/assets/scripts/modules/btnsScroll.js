@@ -6,7 +6,7 @@ const btnsScroll = (btnId) => {
 
   btn.addEventListener('click', (e) => {
     e.preventDefault();
-    smoothScroll(btn_href, 5000);
+    smoothScroll(btn_href);
   });
 
 }

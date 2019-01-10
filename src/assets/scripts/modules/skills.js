@@ -1,25 +1,30 @@
+import viewObserver from "./viewObserver.js";
 import Vue from 'vue';
 
 const skills = () => {
+
+  Vue.directive('animate', {
+    inserted: (element, binding) => {
+      let val = binding.value;
+
+      const animatedCircle = element.querySelector('.skill__circle_above');
+      const dashArray = parseInt(getComputedStyle(animatedCircle).getPropertyValue("stroke-dasharray"));
+      const percent = dashArray * (val / 100);
+      function inViewAction() {
+        if (viewObserver(element)) {
+          animatedCircle.style.strokeDasharray = percent + dashArray;
+        }
+      }
+      inViewAction();
+      window.addEventListener('scroll', () => inViewAction());
+    }
+  });
+
   const skill = {
     template: "#skill",
     props: {
       skillName: String,
       skillPercents: Number
-    },
-    methods: {
-      drawCircle() {
-        const circle = this.$refs["color-circle"];
-        const dashOffset = parseInt(
-          getComputedStyle(circle).getPropertyValue("stroke-dashoffset")
-        );
-        const percents = (dashOffset / 100) * (100 - this.skillPercents);
-
-        circle.style.strokeDashoffset = percents;
-      }
-    },
-    mounted() {
-      this.drawCircle();
     }
   }
 

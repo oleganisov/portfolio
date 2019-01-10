@@ -206,10 +206,10 @@
 			</div>
 		</script>
 		<script type="text/x-template" id="skill">
-			<div class="skill">
+			<div class="skill" :data-percent="skillPercents" v-animate="skillPercents">
 				<svg class="skill__figure" viewBox="0 0 100 100" preserveAspectRatio="none">
 					<circle class="skill__circle skill__circle_under" cx="50" cy="50" r="40"></circle>
-					<circle class="skill__circle skill__circle_above" cx="50" cy="50" r="40" ref="color-circle"></circle>
+					<circle class="skill__circle skill__circle_above" cx="50" cy="50" r="40"></circle>
 				</svg>
 				<div class="skill__title">{{ skillName }}</div>
 			</div>

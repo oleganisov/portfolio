@@ -6,11 +6,11 @@
   right: 0;
   &__main {
     display: grid;
-    grid-template: "left center right" 1fr / 1fr 1fr 1fr;
+    grid-template: "left center right" 1fr / 35% 1fr 25%;;
     background-color: rgba($gray, 0.85);
     padding: 30px 30px;
     @include laptop {
-      grid-template: "left center right" 1fr / 35% 1fr 25%;
+      grid-template: "left center right" 1fr / 30% 1fr 25%;
     }
     @include tablets {
       padding: 15px 15px;

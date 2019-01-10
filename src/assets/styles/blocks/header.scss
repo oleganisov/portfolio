@@ -1,23 +1,25 @@
 .header {
   min-height: 650px;
   height: 100vh;
+  position: relative;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
   display: flex;
   flex-direction: column;
+  @include smallphones{
+    min-height: 568px;
+  }
   &__top {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 5%;
     padding: 28px 31px 0;
-    @include tablets {
-      margin-bottom: 20%;
-    }
   }
   &__avatar {
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
   }
   &__triangles {
     position: absolute;

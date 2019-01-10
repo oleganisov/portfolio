@@ -13,6 +13,9 @@ body {
   @include tablets {
     font-size: 14px;
   }
+  @include smallphones {
+    line-height: 1.2;
+  }
 }
 
 .is-locked {

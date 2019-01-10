@@ -55,6 +55,9 @@
   &:hover .btn-next__ico {
     opacity: 1;
   }
+  @include phones{
+    bottom: 25%;
+  }
 }
 
 .btn-prev {

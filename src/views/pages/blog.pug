@@ -17,11 +17,10 @@ block scripts
 
 block content
   section.blog#blog
-    aside.blog__sidebar
-      nav.nav-blog#nav-blog
-        ul.nav-blog__list
-          li(v-for="post in posts").nav-blog__item
-            a(:href="'#post-'+post.id").nav-blog__link {{ post.title }}
+    nav.blog__nav.blog-nav#blog-nav
+      ul.blog-nav__list
+          li(v-for="post in posts").blog-nav__item
+            a(:href="'#post-'+post.id").blog-nav__link {{ post.title }}
     main.blog__content
       ul.blog__list
         li(:id="'post-' + post.id" v-for="post in posts").blog__item

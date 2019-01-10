@@ -56,13 +56,11 @@
 			</header>
 			<div class="maincontent">
 				<section class="blog" id="blog">
-					<aside class="blog__sidebar">
-						<nav class="nav-blog" id="nav-blog">
-							<ul class="nav-blog__list">
-								<li class="nav-blog__item" v-for="post in posts"><a class="nav-blog__link" :href="'#post-'+post.id">{{ post.title }}</a></li>
-							</ul>
-						</nav>
-					</aside>
+					<nav class="blog__nav blog-nav" id="blog-nav">
+						<ul class="blog-nav__list">
+							<li class="blog-nav__item" v-for="post in posts"><a class="blog-nav__link" :href="'#post-'+post.id">{{ post.title }}</a></li>
+						</ul>
+					</nav>
 					<main class="blog__content">
 						<ul class="blog__list">
 							<li class="blog__item" :id="'post-' + post.id" v-for="post in posts">

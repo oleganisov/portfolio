@@ -1,6 +1,10 @@
-.nav-blog {
+.blog-nav {
   text-align: right;
   font-weight: bold;
+  &__list{
+    position: sticky;
+    top: 5%;
+  }
   &__item {
     padding: 15px 20px 15px 0;
     position: relative;
@@ -15,7 +19,7 @@
       width: 3px;
     }
     &:hover {
-      .nav-blog__link,
+      .blog-nav__link,
         {
         color: $blue-light;
       }
@@ -34,8 +38,8 @@
   }
 }
 
-.nav-blog__item.is-active {
-  .nav-blog__link {
+.blog-nav__item.is-active {
+  .blog-nav__link {
     color: $blue-light;
   }
   &:after {

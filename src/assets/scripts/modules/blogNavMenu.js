@@ -3,8 +3,8 @@ import smoothScroll from "./smoothScroll.js";
 
 const blogNavMenu = () => {
   let blogPosts = document.querySelectorAll('.blog__item');
-  let blogNavs = document.querySelectorAll('.nav-blog__item');
-  let blogLinks = document.querySelectorAll('.nav-blog__link');
+  let blogNavs = document.querySelectorAll('.blog-nav__item');
+  let blogLinks = document.querySelectorAll('.blog-nav__link');
 
   window.addEventListener('scroll', () => {
     blogNavs.forEach((item, index) => {

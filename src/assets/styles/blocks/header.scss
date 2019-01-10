@@ -2,9 +2,7 @@
   min-height: 650px;
   height: 100vh;
   position: relative;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   @include smallphones{
@@ -46,6 +44,12 @@
     }
   }
   &__bg {
-    background-image: url('./assets/images/bg_1800.jpg');
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120%;
+    max-width: 100%;
   }
 }

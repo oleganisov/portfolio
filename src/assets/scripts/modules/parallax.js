@@ -23,6 +23,7 @@ const parallaxMouse = () => {
 const parallaxScroll = () => {
   const avatar = document.querySelector('.avatar');
   const svg = document.querySelector('.avatar__svg');
+  const bg = document.querySelector('.header__bg');
 
   const move = (block, windowScroll, strafeAmount) => {
     const strafe = -windowScroll / strafeAmount + '%';
@@ -33,6 +34,7 @@ const parallaxScroll = () => {
     style.webkitTransform = transformString;
   };
   const init = wScroll => {
+    move(bg, wScroll, 55);
     move(svg, wScroll, 20);
     move(avatar, wScroll, 3);
   };

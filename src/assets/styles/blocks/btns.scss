@@ -51,12 +51,15 @@
 
 .btn-next {
   @extend %btn_arrow;
-  bottom: 30%;
+  bottom: 190px;
   &:hover .btn-next__ico {
     opacity: 1;
   }
   @include phones{
-    bottom: 25%;
+    bottom: 180px;
+  }
+  @include smallphones{
+    bottom: 140px;
   }
 }
 

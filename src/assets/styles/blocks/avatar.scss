@@ -17,6 +17,7 @@
   &__svg {
     width: 400px;
     height: 200px;
+    will-change: transform;
     @include phones {
       width: 320px;
       height: 160px;

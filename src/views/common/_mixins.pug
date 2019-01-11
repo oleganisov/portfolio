@@ -43,11 +43,14 @@ mixin ham-btn
   .ham-btn#ham_btn
     .ham-bar
 
-mixin logInput(iconClass, typeInput, placeholderInput, subclass, inputClass, name)
+mixin logInput(iconClass, typeInput, placeholderInput, subclass, inputClass, name, minLength)
   div(class="login-input " + inputClass)
+    if (minLength)
+      input(id=name type=typeInput, placeholder=placeholderInput name=name required minlength=`${minLength}`).login-input__input
+    else
+      input(id=name type=typeInput, placeholder=placeholderInput name=name required).login-input__input
     span(class="login-input__icon "+subclass)
       i(aria-hidden="true" class="fa "+iconClass)
-    input(id=name type=typeInput, placeholder=placeholderInput name=name required).login-input__input
 
 mixin checkbox(name, title, inputClass, id)
   label(class="checkbox " + inputClass)

@@ -3,7 +3,8 @@
   display: flex;
   justify-content: center;
   &__input {
-    display: none;
+    position: absolute;
+    left: -9999px
   }
   &__span {
     display: block;

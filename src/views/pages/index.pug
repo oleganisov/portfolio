@@ -1,18 +1,40 @@
 extends ../auth.layout.pug
 
 block content
-  .wrapper.wrapper-intro
-    .intro
-      .intro__avatar.avatar
-        .avatar__pic
-          img.avatar__img(src='./assets/images/photo.png')
-        .avatar__name='Олег Анисов'
-        .avatar__info.intro__info='Личный сайт веб разработчика'
-        .intro__social
-          +social(['vk','github','in'],'icon-blue')
-      .intro__menu
-        +menu(menu_index,'intro-nav')
-  .auth-btn
-    a.btn='Авторизоваться'
-  .copyright-block
-    p="© Олег Анисов | Создано с любовью в LoftSchool | 2019"
+  header.header.header--welcome
+    a(href="#")#to-auth.btn='Авторизоваться'
+
+  div(class=`parallax-block`)
+    .parallax-block__layer
+      video(autoplay="autoplay", loop="loop" src="./assets/video/night.mp4", type="video/mp4").parallax-block__video
+    .parallax-block__layer
+      img(src="./assets/images/bg/index/mountain.png", alt="mountain").parallax-block__img
+    .parallax-block__layer
+      img(src="./assets/images/bg/index/forest.png", alt="forest").parallax-block__img
+
+  .flip#flip-container
+    .index-card.flip__elem
+      .index-card__main
+        +avatar('', 'Олег Анисов', 'Личный сайт веб разработчика')
+        .index-card__social
+          +social(['vk','github','in'],'social__icon--blue')
+      .index-card__bottom
+        +menu(menu_index,'index-nav','index_nav')
+
+    form(method="POST" id='sign-in').index-card.flip__elem.flip__elem_back
+      .index-card__main
+        h2.index-card__title Авторизуйтесь
+        .index-card__form
+          +logInput("fa-user", "text", "Логин", "", "index-card__input", "user-login", "4")
+          +logInput("fa-key", "password", "Пароль", "", "index-card__input", "user-password", "3")
+          +checkbox("check_first", "Я человек", "index-card__check", "user-check-1")
+          p.index-card__small Вы точно не робот?
+          .index-card__radios
+            +radio( "check_second","Да", "index-card__radio", "y")
+            +radio( "check_second","Не уверен", "index-card__radio", "n")
+      .index-card__bottom
+        button(type="reset" id="log-reset" class="").index-card__button На Главную
+        button(type="submit" id="log-submit").index-card__button Войти
+
+  .footer.footer--welcome
+    p.footer__copyright.footer__copyright--welcome="© Олег Анисов | Создано с любовью в LoftSchool | 2019"

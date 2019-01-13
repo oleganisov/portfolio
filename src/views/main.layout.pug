@@ -1,23 +1,30 @@
 include ./common/_variables
 include ./common/_mixins
 block variables
-
+  - var pageClass = ''
+  
 doctype html
 html(lang="ru")
   head
     meta(charset="utf-8")
     meta(content="ie=edge" http-equiv="x-ua-compatible")
     meta(content="width=device-width, initial-scale=1" name="viewport")
+    link(rel="icon" href="./assets/images/fav_night.png" type="image/png")
     
     title Portfolio | #{title}
     link(rel='stylesheet' href='main.min.css')
-  body
+  body(class= pageClass)
     .wrapper
+      include ./common/header.pug
+      +preloader
       .maincontent
         block content
         
-    include ./common/footer.pug
-
+      include ./common/footer.pug
+    include ./common/ham-menu
+    block templates
+    
     //- script(src='./bootloader.bundle.js')
     //- script(src='./vendor.bundle.js')
+    
     block scripts

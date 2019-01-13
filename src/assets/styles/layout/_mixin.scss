@@ -1,8 +1,8 @@
-@function rem($px) {
-  $rem: $px/14px;
-  @return #{$rem}rem;
+@mixin laptop{
+  @media (max-width:$laptop) {
+    @content;
+  }
 }
-
 @mixin tablets{
   @media (max-width:$tablets) {
     @content;
@@ -11,5 +11,34 @@
 @mixin phones{
   @media (max-width:$phones) {
     @content;
+  }
+}
+@mixin smallphones{
+  @media (max-width:$smallphones) {
+    @content;
+  }
+}
+
+@mixin bigTitle{
+  font-family: $font-title;
+  text-transform: uppercase;
+  font-size: 63px;
+  @include tablets {
+    font-size: 49px;
+  }
+  @include phones {
+    font-size: 35px;
+  }
+}
+
+@mixin smallTitle{
+  font-family: $font-title;
+  text-transform: uppercase;
+  font-size: 35px;
+  @include tablets {
+    font-size: 30px;
+  }
+  @include phones {
+    font-size: 21px;
   }
 }

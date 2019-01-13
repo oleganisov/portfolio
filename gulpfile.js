@@ -123,6 +123,15 @@ gulp.task("images", () => {
     .pipe(gulp.dest(`${config.DIST_DIR}/assets/images/`));
 });
 
+// просто переносим видео
+gulp.task("video", () => {
+  return gulp
+    .src([
+      `${config.SRC_DIR}/video/**/*.*`
+    ])
+    .pipe(gulp.dest(`${config.DIST_DIR}/assets/video/`));
+});
+
 // галповский вотчер
 gulp.task("watch", () => {
   gulp.watch(`${config.SRC_DIR}/styles/**/*.scss`, gulp.series("styles"));
@@ -138,7 +147,7 @@ gulp.task(
   gulp.series(
     "clean",
     "svg",
-    gulp.parallel("styles", "pug", "images", "fonts", "scripts"),
+    gulp.parallel("styles", "pug", "images", "video", "fonts", "scripts"),
     gulp.parallel("watch", "server")
   )
 );
@@ -149,6 +158,6 @@ gulp.task(
   gulp.series(
     "clean",
     "svg",
-    gulp.parallel("styles", "pug", "images", "fonts", "scripts")
+    gulp.parallel("styles", "pug", "images", "video", "fonts", "scripts")
   )
 );

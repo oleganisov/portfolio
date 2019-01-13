@@ -1,7 +1,32 @@
 .avatar {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  color: $white;
+  will-change: transform;
+  &__stars {
+    position: absolute;
+    top: -10%;
+    opacity: 0.3;
+    @include phones {
+      top: -5%;
+    }    
+  }
+  &__svg {
+    width: 400px;
+    height: 200px;
+    will-change: transform;
+    @include phones {
+      width: 320px;
+      height: 160px;
+    }
+    @include smallphones {
+      width: 285px;
+      height: 135px;
+    }
+  }
   &__pic {
     margin-bottom: 35px;
     position: relative;
@@ -9,6 +34,11 @@
     overflow: hidden;
     height: 140px;
     width: 140px;
+    @include smallphones{
+      margin-bottom: 25px;
+      height: 120px;
+      width: 120px;
+    }
   }
   &__img {
     position: absolute;
@@ -17,9 +47,25 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+  &__desc {
+    text-align: center;
+  }
   &__name {
-    font-size: 28px;
+    font-size: 35px;
     font-weight: 500;
     margin-bottom: 15px;
+    @include laptop {
+      font-size: 28px;
+    }
+    @include phones {
+      font-size: 21px;
+    }
+    @include smallphones {
+      font-size: 18px;
+    }
   }
+}
+
+.page-blog .avatar__name{
+  @include bigTitle;
 }

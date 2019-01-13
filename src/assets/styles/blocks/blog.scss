@@ -3,22 +3,102 @@
   display: flex;
   position: relative;
   padding-top: 40px;
-  &__triangle {
+  padding-bottom: 50px;
+  &__triangles {
     position: absolute;
     width: 100%;
     display: flex;
     top:-150px;
   }
-  &__sidebar {
+  &__nav {
     width: 25%;
     padding-left: 60px;
+    @include tablets{
+      display: none;
+    }
   }
   &__content {
     width: 75%;
     padding-left: 80px;
     padding-right: 100px;
+    @include tablets{
+      width: 100%;
+      padding: 0 5%;
+    }
+    @include phones{
+      padding: 0 4%;
+    }
   }
   &__title {
+    text-align: left;
+    margin-bottom: 20px;
+    @include smallTitle;
     text-transform: initial;
+  }
+  &__item{
+    text-align: left;
+    padding-bottom: 60px;
+    border-bottom: 5px solid #ecebe4;
+    margin-bottom: 50px;
+    @include phones {
+      padding-bottom: 30px;
+      margin-bottom: 30px;
+    }
+    &:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+      margin-bottom: initial;
+    }
+  }
+  &__date {
+    display: inline-block;
+    opacity: .7;
+    color: rgba(8, 60, 150, 0.702);
+    margin-bottom: 20px;
+  }
+  &-menu{
+    visibility: hidden;
+    position: fixed;
+    z-index: 5;
+    background-color: rgb(37, 52, 104);
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    transition: visibility .5s, width .5s;
+    &.is-active{
+      visibility: visible;
+      width: 300px;
+    }
+    &.is-active &__list{
+      opacity: 1;
+    }
+    &__list{
+      padding: 0 20px;
+      opacity: 0;
+      transition: opacity .5s;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    &__item{
+      margin-bottom: 40px;
+      text-align: right;
+    }
+    &__link{
+      color: #fff;
+    }
+  }
+  &-btn{
+    visibility: hidden;
+    position: absolute;
+    z-index: -1;
+    right: -15px;
+    top:50%;
+    transform: translateY(-50%);
+    &.is-active{
+      visibility: visible;
+    }
   }
 }

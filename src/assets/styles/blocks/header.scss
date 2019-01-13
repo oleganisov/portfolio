@@ -1,6 +1,55 @@
 .header {
+  min-height: 650px;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 15px;
+  flex-direction: column;
+  @include smallphones{
+    min-height: 568px;
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    padding: 28px 31px 0;
+  }
+  &__avatar {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  &__triangles {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  &--welcome {
+    flex-direction: row;
+    justify-content: flex-end;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 24px 100px;
+    height: auto;
+    min-height: auto;
+    @include tablets {
+      padding: 20px 20px;
+    }
+    @include phones{
+      justify-content: center;
+      padding: 10px 0 0;
+    }
+  }
+  &__bg {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 120%;
+    will-change: transform;
+  }
 }

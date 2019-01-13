@@ -4,10 +4,15 @@
   width: 40px;
   border-radius: 3px;
   display: inline-block;
+  @include phones {
+    height: 4px;
+    width: 30px;
+  }
 }
 
 .ham-btn {
   cursor: pointer;
+  z-index: 10;
 }
 
 .ham-bar {
@@ -19,6 +24,9 @@
     position: absolute;
     top: -15px;
     transition: transform .3s;
+    @include phones {
+      top: -10px;  
+    }
   }
   &::after {
     content: "";
@@ -26,6 +34,9 @@
     position: absolute;
     bottom: -15px;
     transition: transform .3s;
+    @include phones {
+      bottom: -10px;  
+    }
   }
 }
 

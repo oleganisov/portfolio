@@ -1,0 +1,34 @@
+.login-input {
+  display: flex;
+  flex-direction: row-reverse;
+  &__icon {
+    display: block;
+    width: 45px;
+    background-color: #f0efe9;
+    color: #c2cacc;
+    line-height: 45px;
+    text-align: center;
+  }
+  &__input {
+    display: block;
+    outline: none;
+    border: 0;
+    height: 45px;
+    width: calc(100% - 45px);
+    background-color: #fff;
+    color: #373e42;
+    padding: 0 20px;
+    &:focus:invalid{
+      // border: 1px solid #e44845;
+      &~.login-input__icon {
+        color: #e44845;
+      }
+    }
+    &:focus:valid{
+      // border: 1px solid $blue-dark;
+      &~.login-input__icon {
+        color: $blue-dark;
+      }
+    }
+  }
+}

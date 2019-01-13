@@ -1,6 +1,6 @@
 .form {
   &__area {
-    width: 380px;
+    max-width: 380px;
     margin: 0 auto;
     background-color: rgba(#202027, .6);
     padding-top: 40px;
@@ -17,71 +17,60 @@
       background-color: $text-color;
     }
   }
+  &__row {
+    width: 100%;
+    margin-bottom: 20px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__field {
+    height: 100%;
+    position: relative;
+  }
   &__label {
     position: absolute;
     left: -9999px;
     top: 0;
     opacity: .8;
   }
-}
-
-.form__row {
-  width: 100%;
-  margin-bottom: 20px;
-  &:last-child {
-    margin-bottom: 0;
-  }
-  &-title {
-    font-weight: bold;
-    opacity: .8;
-    margin-bottom: 30px;
-  }
-}
-
-.form__field {
-  height: 100%;
-  position: relative;
-}
-
-.form__btns {
-  display: flex;
-}
-
-.form__button {
-  outline: none;
-  color: $white;
-  font-weight: 500;
-  width: 50%;
-  height: 45px;
-  line-height: 45px;
-  transition: .3s;
-  &-submit {
-    background-color: $blue-light;
-    &:hover {
-      background-color: $blue-dark;
+  &__input-text {
+    outline: none;
+    border: 0;
+    width: 100%;
+    height: 45px;
+    padding: 0 20px;
+    line-height: 45px;
+    overflow: hidden;
+    background-color: rgba(#2d282f, .6);
+    color: $text-color;
+    &::placeholder {
+      color: rgba($white, .5);
     }
   }
-  &-clear {
-    background-color: transparent;
+  &__input-text--textarea {
+    height: initial;
+    resize: none;
   }
-}
-
-.form__input-text {
-  outline: none;
-  border: 0;
-  width: 100%;
-  height: 45px;
-  padding: 0 20px;
-  line-height: 45px;
-  overflow: hidden;
-  background-color: rgba(#2d282f, .6);
-  color: $text-color;
-  &::placeholder {
-    color: rgba($white, .5);
+  &__btns {
+    display: flex;
   }
-}
-
-.form__input-text--textarea {
-  height: initial;
-  resize: none;
+  &__button {
+    outline: none;
+    color: $white;
+    font-weight: 500;
+    width: 50%;
+    height: 45px;
+    line-height: 45px;
+    transition: .3s;
+    &-submit {
+      background-color: $blue-light;
+      &:hover {
+        background-color: $blue-dark;
+      }
+    }
+    &-clear {
+      background-color: transparent;
+    }
+  }
 }

@@ -4,6 +4,9 @@
   }
   &__item {
     margin-right: 30px;
+    @include phones {
+      margin-right: 15px;
+    }
     &:last-child {
       margin-right: initial;
     }
@@ -11,21 +14,22 @@
   &__icon {
     height: 25px;
     width: 25px;
+    @include phones {
+      height: 20px;
+      width: 20px;
+    }
     transition: fill .3s;
     &:hover {
       fill: $blue-light;
     }
+    &--blue {
+      fill: $blue-dark;
+    }
+    &--white {
+      fill: #fff;
+    }
+    &--gray {
+      fill: $gray-light;
+    }
   }
-}
-
-.icon-blue {
-  fill: $blue-dark;
-}
-
-.icon-white {
-  fill: #fff;
-}
-
-.icon-gray {
-  fill: $gray-light;
 }

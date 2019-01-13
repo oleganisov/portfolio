@@ -1,13 +1,47 @@
-.triangle {
-  height: 150px;
-  width: 100%;
-  &_fill_white {
+.triangles {
+  &__svg{
+    display: block;
+  }
+  &__left,
+  &__right {
     fill: $white;
+  } 
+  &__bottom{
+    background-color: rgba(#0d1120,0.85);
+    height: 170px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include tablets{
+      height: 130px;
+    }
   }
-  &_fill_beige {
-    fill: $beige;
+  &__stars {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(190deg);
+    display: block;
+    max-width: 263px;
+    @include tablets{
+      max-width: 170px;
+    }
+    width: 100%;
+    height: 100%;
+    opacity: 0.15;
   }
-  &_fill_gray {
-    fill: rgba($gray,0.85);
+}
+
+.page-works .triangles__left,
+.page-works .triangles__right {
+  fill: rgba(#0d1120,0.85);
+}
+
+.page-about .triangles__right {
+  fill: $beige;
+  @include tablets{
+    fill: $white;
   }
 }

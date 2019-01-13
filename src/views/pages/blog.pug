@@ -2,52 +2,34 @@ extends ../main.layout.pug
 
 block variables
   - var title = 'Блог'
+  - var pageClass = 'page-blog'
+
+block headerAvatar
+  .header__avatar  
+    +avatar('', 'Блог', 'Статьи которые я написал',true)
+
+block headerBottom
+
+block trianglesBottom
 
 block scripts
-  script(src='./about.bundle.js')
+  script(src='./blog.bundle.js')
 
 block content
-  section.section.hero
-    include ../common/header
-    .hero__background--svg.background-svg
-    .hero__avatar.avatar
-      .avatar__pic
-        img.avatar__img(src='./assets/images/photo.png')
-      h1.avatar__name.title-h1= title
-      .avatar__info='Статьи, которые я написал'
-  section.section.blog
-    .blog__triangle
-      svg.triangle.triangle_fill_white(viewbox="0 0 900 150", preserveAspectRatio="none")
-        polygon(points="0,0 0,150 900,150")
-      svg.triangle.triangle_fill_white(viewbox="0 0 900 150", preserveAspectRatio="none")
-        polygon(points="0,150 900,150 900,0")
-    aside.blog__sidebar
-      .nav-blog
-        ul.nav-blog__list
-          li.nav-blog__item.nav-blog__item--active
-            a.nav-blog__link(href="#") Самое важное в SASS
-              li.nav-blog__item
-                a.nav-blog__link(href="#") Приёмы в вёрстке, без которых не обходится ни один сайт
-              li.nav-blog__item
-                a.nav-blog__link(href="#") Самый необходимый набор Gulp плагинов
-              li.nav-blog__item
-                a.nav-blog__link(href="#") Почему я выбрал Jade
+  section.blog#blog
+    nav.blog__nav.blog-nav#blog-nav
+      ul.blog-nav__list
+          li(v-for="post in posts").blog-nav__item
+            a(:href="'#post-'+post.id").blog-nav__link {{ post.title }}
     main.blog__content
-      section.articles
-        article.articles__item
-          .articles__item-header
-            h2.title-h2.articles__item-title Самое важное в SASS
-            time.articles__item-date 22 ноября 2016
-          .articles__item-content.text-content
-            p Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.
-            p Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
-            p!= '<pre class="javascript" style="font-family:monospace;"><ol><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #006600; font-style: italic;">//присвоить</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">$<span style="color: #009900;">&#40;</span>document<span style="color: #009900;">&#41;</span>.<span style="color: #660066;">data</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">\'prop\'</span><span style="color: #339933;">,</span> <span style="color: #009900;">&#123;</span> anything<span style="color: #339933;">:</span> <span style="color: #3366CC;">&quot;любой объект&quot;</span> <span style="color: #009900;">&#125;</span><span style="color: #009900;">&#41;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #006600; font-style: italic;">//прочитать</span></div></li><li style="font-weight: bold; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">alert<span style="color: #009900;">&#40;</span> $<span style="color: #009900;">&#40;</span>document<span style="color: #009900;">&#41;</span>.<span style="color: #660066;">data</span><span style="color: #009900;">&#40;</span><span style="color: #3366CC;">\'prop\'</span><span style="color: #009900;">&#41;</span><span style="color: #339933;">,</span>anything <span style="color: #009900;">&#41;</span> <span style="color: #006600; font-style: italic;">//любой объект</span></div></li></ol></pre>'
-        article.articles__item
-          .articles__item-header
-            h2.title-h2.articles__item-title Приёмы в вёрстке, без которых не обходится ни один сайт
-            time.articles__item-date 13 ноября 2016
-          .articles__item-content.text-content
-            p Таким образом начало повседневной работы по формированию позиции позволяет выполнять важные задания по разработке направлений прогрессивного развития. Разнообразный и богатый опыт новая модель организационной деятельности играет важную роль в формировании новых предложений. Товарищи! новая модель организационной деятельности играет важную роль в формировании систем массового участия.
-            p Не следует, однако забывать, что укрепление и развитие структуры обеспечивает широкому кругу (специалистов) участие в формировании систем массового участия. Идейные соображения высшего порядка, а также рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании позиций, занимаемых участниками в отношении поставленных задач. Товарищи! постоянный количественный рост и сфера нашей активности способствует подготовки и реализации модели развития. С другой стороны рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.
-
-  //- include ../common/footer.pug
+      ul.blog__list
+        li(:id="'post-' + post.id" v-for="post in posts").blog__item
+          h2.blog__title {{ post.title }}
+          time.blog__date {{ post.created_at | correctDate}}
+          .blog__text.text-content(v-html="post.content")
+    nav.blog-menu#blog_menu
+      ul.blog-menu__list
+        li(v-for="post in posts").blog-menu__item
+          a(:href="'#post-'+post.id").blog-menu__link {{ post.title }}
+      .blog-btn#blog_btn
+        .swipe-btn

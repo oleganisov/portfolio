@@ -5,6 +5,7 @@ import yandexmaps from "./modules/ymaps.js";
 import skills from "./modules/skills.js";
 import hamMenu from "./modules/hamMenu";
 import btnsScroll from "./modules/btnsScroll.js";
+import preloader from './modules/preloader';
 
 document.addEventListener('DOMContentLoaded', () => {
   parallaxScroll();
@@ -12,4 +13,5 @@ document.addEventListener('DOMContentLoaded', () => {
   skills();
   hamMenu();
   btnsScroll('btn_next');
+  preloader();
 });

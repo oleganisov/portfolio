@@ -14,16 +14,15 @@ html(lang="ru")
     title Portfolio | #{title}
     link(rel='stylesheet' href='main.min.css')
   body(class= pageClass)
-    #preloader-container
     .wrapper
       include ./common/header.pug
+      +preloader
       .maincontent
         block content
         
       include ./common/footer.pug
     include ./common/ham-menu
     block templates
-      //- include ./components/templates/preloader
     
     //- script(src='./bootloader.bundle.js')
     //- script(src='./vendor.bundle.js')

@@ -9,7 +9,6 @@
 		<link rel="stylesheet" href="main.min.css">
 	</head>
 	<body class="page-blog">
-		<div id="preloader-container"></div>
 		<div class="wrapper">
 			<header class="header">
 				<div class="header__top">
@@ -54,6 +53,12 @@
 					</svg>
 				</div>
 			</header>
+			<div class="preloader" id="preloader">
+				<div class="preloader__icon">
+					<div class="preloader__circle"></div>
+					<div class="preloader__percent" id="preloader-counter">0%</div>
+				</div>
+			</div>
 			<div class="maincontent">
 				<section class="blog" id="blog">
 					<nav class="blog__nav blog-nav" id="blog-nav">

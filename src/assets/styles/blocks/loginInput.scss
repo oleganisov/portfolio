@@ -19,13 +19,13 @@
     color: #373e42;
     padding: 0 20px;
     &:focus:invalid{
-      border: 1px solid #e44845;
+      // border: 1px solid #e44845;
       &~.login-input__icon {
         color: #e44845;
       }
     }
     &:focus:valid{
-      border: 1px solid $blue-dark;
+      // border: 1px solid $blue-dark;
       &~.login-input__icon {
         color: $blue-dark;
       }

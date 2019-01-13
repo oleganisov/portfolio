@@ -65,3 +65,9 @@ mixin radio(name, title, inputClass, value)
     span.radio__span
       i(aria-hidden="true" class="fa fa-circle")
     span.radio__title= title
+
+mixin preloader
+  .preloader#preloader
+    .preloader__icon
+      .preloader__circle
+      #preloader-counter.preloader__percent 0%

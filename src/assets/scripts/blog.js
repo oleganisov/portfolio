@@ -1,4 +1,5 @@
 import blogList from "./modules/blogList.js";
+import preloader from './modules/preloader';
 import {
   parallaxScroll
 } from './modules/parallax';
@@ -14,4 +15,5 @@ document.addEventListener('DOMContentLoaded', () => {
   hamMenu();
   swipeBtn();
   stickyMenu();
+  preloader();
 });

@@ -1,4 +1,5 @@
 import switchCards from './modules/switchCards';
+import authorization from './modules/authorization';
 import preloader from './modules/preloader';
 import {
     parallaxMouse
@@ -14,4 +15,5 @@ document.addEventListener('DOMContentLoaded', () => {
     switchCards(linkAuth, flipContainer, signInReset);
     parallaxMouse();
     preloader();
+    authorization();
 });

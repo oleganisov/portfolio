@@ -19,10 +19,7 @@ const preloader = () => {
 
     path ? imgPathes.push(path) : null;
   });
-
-  console.log(imgPathes);
-
-
+  
   const setPercent = (total, current) => {
     let percents = Math.ceil(current / total * 100);
     const counter = document.querySelector('#preloader-counter');

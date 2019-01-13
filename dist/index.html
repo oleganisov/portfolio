@@ -68,13 +68,13 @@
 						<h2 class="index-card__title">Авторизуйтесь</h2>
 						<div class="index-card__form">
 							<div class="login-input index-card__input">
-								<input class="login-input__input" id="user-login" type="text" placeholder="Логин" name="user-login" required="required" minlength="4"/><span class="login-input__icon "><i class="fa fa-user" aria-hidden="true"></i></span>
+								<input class="login-input__input" id="user_login" type="text" placeholder="Логин" name="user_login" required="required" minlength="4"/><span class="login-input__icon "><i class="fa fa-user" aria-hidden="true"></i></span>
 							</div>
 							<div class="login-input index-card__input">
-								<input class="login-input__input" id="user-password" type="password" placeholder="Пароль" name="user-password" required="required" minlength="3"/><span class="login-input__icon "><i class="fa fa-key" aria-hidden="true"></i></span>
+								<input class="login-input__input" id="user_password" type="password" placeholder="Пароль" name="user_password" required="required" minlength="3"/><span class="login-input__icon "><i class="fa fa-key" aria-hidden="true"></i></span>
 							</div>
 							<label class="checkbox index-card__check">
-								<input class="checkbox__input" type="checkbox" name="check_first" id="user-check-1" required="required"/><span class="checkbox__span"><i class="fa fa-check" aria-hidden="true"></i></span><span class="checkbox__title">Я человек</span>
+								<input class="checkbox__input" type="checkbox" name="check_first" id="user-check-1"/><span class="checkbox__span"><i class="fa fa-check" aria-hidden="true"></i></span><span class="checkbox__title">Я человек</span>
 							</label>
 							<p class="index-card__small">Вы точно не робот?</p>
 							<div class="index-card__radios">
@@ -91,6 +91,7 @@
 						<button class="index-card__button" type="reset" id="log-reset">На Главную</button>
 						<button class="index-card__button" type="submit" id="log-submit">Войти</button>
 					</div>
+					<div class="modal-container" id="modal_container"></div>
 				</form>
 			</div>
 			<div class="footer footer--welcome">

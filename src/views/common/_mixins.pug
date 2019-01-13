@@ -54,7 +54,7 @@ mixin logInput(iconClass, typeInput, placeholderInput, subclass, inputClass, nam
 
 mixin checkbox(name, title, inputClass, id)
   label(class="checkbox " + inputClass)
-    input(type="checkbox", name=name, id=id, class="checkbox__input" required)
+    input(type="checkbox", name=name, id=id, class="checkbox__input")
     span.checkbox__span
       i(aria-hidden="true" class="fa fa-check")
     span.checkbox__title= title

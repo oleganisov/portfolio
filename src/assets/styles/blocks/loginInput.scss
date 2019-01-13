@@ -8,6 +8,12 @@
     color: #c2cacc;
     line-height: 45px;
     text-align: center;
+    &--success{
+      color: $blue-dark;
+    }
+    &--error{
+      color: #e44845;
+    }
   }
   &__input {
     display: block;
@@ -19,13 +25,11 @@
     color: #373e42;
     padding: 0 20px;
     &:focus:invalid{
-      // border: 1px solid #e44845;
       &~.login-input__icon {
         color: #e44845;
       }
     }
     &:focus:valid{
-      // border: 1px solid $blue-dark;
       &~.login-input__icon {
         color: $blue-dark;
       }

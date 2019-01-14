@@ -55,18 +55,18 @@ block content
             .form__row
               .form__field
                 label.form__label.form__label_input Имя
-                input.form__input-text(type='text', placeholder='Ваше Имя')
+                input.form__input-text(type='text', placeholder='Ваше Имя' required)
             .form__row
               .form__field
                 label.form__label.form__label_input Email
-                input.form__input-text(type='text', placeholder='Ваш Email')
+                input.form__input-text(type='text', placeholder='Ваш Email' required)
             .form__row
               .form__field
                 label.form__label.form__label_input Ваше сообщение
-                textarea.form__input-text.form__input-text--textarea(placeholder='Ваше сообщение' rows='3')
+                textarea.form__input-text.form__input-text--textarea(placeholder='Ваше сообщение' rows='3' required)
             .form__row
               .form__btns
                 button.form__button.form__button-submit(type='submit') Отправить
-                button.form__button.form__button-clear(type='clear') Очистить
+                button.form__button.form__button-clear(type='reset') Очистить
       a.btn-prev#btn_prev(href="#slider")
         +icon('portf_arrow_up', 'btn-prev__ico')

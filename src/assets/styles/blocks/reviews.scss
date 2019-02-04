@@ -1,43 +1,49 @@
 .reviews {
-	width: 70%;
+  width: 70%;
   margin: 0 auto;
-	color: $white;
-	margin-bottom: 70px;
-}
-
-.reviews__list {
-	display: flex;
-	justify-content: space-between;
-}
-
-.reviews__item {
-	width: 48%;
-}
-
-.reviews__photo {
-	width: 77px;
-	height: 77px;
-	margin: 0 auto;
-	border-radius: 50%;
-	background-repeat: no-repeat;
-	-webkit-background-size: cover;
-	background-size: cover;
-	background-position: top;
-	margin-bottom: 15px;
-}
-
-.reviews__description {
-	text-align: center;
-	font-style: italic;
-	margin: 0;
-}
-
-.reviews__text {
-	text-align: left;
-	margin-bottom: 20px;
-}
-
-.reviews__author-name {
-	font-weight: bold;
-	font-style: italic;
+  color: $white;
+  margin-bottom: 70px;
+  @include phones {
+    margin-bottom: 40px;
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    @include phones {
+      flex-direction: column;
+    }
+  }
+  &__item {
+    width: 48%;
+    @include phones {
+      width: 100%;
+      margin-bottom: 40px;
+    }
+    &:last-child {
+      margin-bottom: initial;
+    }
+  }
+  &__photo {
+    width: 77px;
+    height: 77px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 15px;
+  }
+  &__description {
+    text-align: center;
+    font-style: italic;
+    margin: 0;
+  }
+  &__text {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  &__author-name {
+    font-weight: bold;
+    font-style: italic;
+  }
 }

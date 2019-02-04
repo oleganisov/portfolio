@@ -1,23 +1,33 @@
 .user {
-  &-desc__avatar {
-    width: 100%;
-    height: auto;
-  }
-  &-desc__pic {
-    display: block;
-    margin: 0 auto;
-    width: 443px;
-    height: 391px;
-    overflow: hidden;
-  }
-  &-desc__avatar {
-    width: 100%;
-    height: auto;
-  }
-  &-desc__data {
-    padding-top: 35px;
-  }
-  &-desc__title {
-    margin-bottom: 25px;
+  &-desc {
+    &__avatar {
+      width: 100%;
+      height: auto;
+    }
+    &__pic {
+      display: block;
+      margin: 0 auto;
+      max-width: 443px;
+      max-height: 391px;
+      overflow: hidden;
+      @include phones {
+        width: 100%;
+      }
+    }
+    &__avatar {
+      width: 100%;
+      height: auto;
+    }
+    &__data {
+      padding-top: 35px;
+    }
+    &__title {
+      margin-bottom: 25px;
+    }
+    &__text {
+      @include phones {
+        padding: 0 5%;
+      }
+    }
   }
 }

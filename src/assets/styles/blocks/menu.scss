@@ -1,45 +1,52 @@
-.intro-nav {
+.index-nav {
+  width: 100%;
   &__list {
     display: flex;
     text-align: center;
   }
   &__item {
-    padding: 15px 0;
-    width: calc(100%/3);
-    background-color: rgba($blue-light, 0.851);
+    flex: 1;
+    background-color: rgba($blue-light, 0.85);
     position: relative;
     transition: background-color .3s;
-    &::before {
-      position: absolute;
-      left: 0;
-      top: 0;
-      content: "";
-      display: block;
-      height: 100%;
-      width: 1px;
-      background-color: #fff;
-    }
-    &:first-child::before {
-      display: none;
+    border-right: 2px solid rgba(#fff, 0.5);
+    &:last-child {
+      border-right: 0;
     }
     &:hover {
-      background-color: rgba($blue-dark, 0.851);
-      cursor: pointer;
+      background-color: rgba($blue-dark, 0.85);
     }
   }
   &__link {
     color: #fff;
+    display: block;
+    padding: 15px 0;
   }
 }
 
 .footer-nav {
   &__list {
     display: flex;
+    @include tablets {
+      justify-content: flex-start;
+    }
+    @include phones {
+      justify-content: center;
+    }
   }
   &__item {
     margin-right: 40px;
     &:last-child {
       margin-right: initial;
+    }
+    @include laptop {
+      margin-right: 30px;
+    }
+    @include tablets {
+      margin-right: 20px;
+    }
+    @include smallphones {
+      margin-right: 10px;
     }
   }
   &__link {

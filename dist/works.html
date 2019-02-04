@@ -4,99 +4,72 @@
 		<meta charset="utf-8">
 		<meta content="ie=edge" http-equiv="x-ua-compatible">
 		<meta content="width=device-width, initial-scale=1" name="viewport">
+		<link rel="icon" href="./assets/images/fav_night.png" type="image/png">
 		<title>Portfolio | Мои работы</title>
 		<link rel="stylesheet" href="main.min.css">
 	</head>
-	<body>
+	<body class="page-works">
+		<div id="preloader-container"></div>
 		<div class="wrapper">
+			<header class="header">
+				<div class="header__top">
+					<div class="social">
+						<ul class="social__list">
+							<li class="social__item"><a class="social__link social__link-vk" href="#">
+									<svg class="social__icon social__icon--white">
+										<use xlink:href="./assets/images/icons/sprite.svg#vk"></use>
+									</svg></a></li>
+							<li class="social__item"><a class="social__link social__link-github" href="#">
+									<svg class="social__icon social__icon--white">
+										<use xlink:href="./assets/images/icons/sprite.svg#github"></use>
+									</svg></a></li>
+							<li class="social__item"><a class="social__link social__link-in" href="#">
+									<svg class="social__icon social__icon--white">
+										<use xlink:href="./assets/images/icons/sprite.svg#in"></use>
+									</svg></a></li>
+						</ul>
+					</div>
+					<div class="ham-btn" id="ham_btn">
+						<div class="ham-bar"></div>
+					</div>
+				</div><img class="header__bg" src="./assets/images/bg/bg_1800.jpg" alt="">
+				<div class="header__avatar"> 
+					<div class="avatar">
+						<div class="avatar__stars">
+							<svg class="avatar__svg">
+								<use xlink:href="./assets/images/sprite_stars.svg#stars1"></use>
+							</svg>
+						</div>
+						<div class="avatar__pic"><img class="avatar__img" src="./assets/images/photo.png" alt="Photo"/></div>
+						<div class="avatar__desc">
+							<h2 class="avatar__name ">Олег Анисов</h2>
+							<p class="avatar__info">Личный сайт веб разработчика</p>
+						</div>
+					</div>
+				</div><a class="btn-next" id="btn_next" href="#slider">
+					<svg class="btn-next__ico">
+						<use xlink:href="./assets/images/icons/sprite.svg#portf_arrow_down"></use>
+					</svg></a>
+				<div class="triangles header__triangles">
+					<svg class="triangles__svg" viewbox="0 0 1000 85" preserveAspectRatio="none">
+						<polygon class="triangles__left" points="0,0   0,86   500.8,86   500.8,84"></polygon>
+						<polygon class="triangles__right" points="1000,0   1000,86   500,86   500,84"></polygon>
+					</svg>
+					<div class="triangles__bottom">
+						<h1 class="title-h1 title-h1--works">Мои работы</h1>
+						<div class="triangles__stars">
+							<svg viewBox="0 0 263 171">
+								<use xlink:href="./assets/images/sprite_stars.svg#stars2"></use>
+							</svg>
+						</div>
+					</div>
+				</div>
+			</header>
 			<div class="maincontent">
-				<section class="section hero">
-					<header class="header">
-						<div class="header__social">
-							<div class="social">
-								<ul class="social__list">
-									<li class="social__item"><a class="social__link social__link-vk" href="#">
-											<svg class="social__icon icon-white">
-												<use xlink:href="./assets/images/icons/sprite.svg#vk"></use>
-											</svg></a></li>
-									<li class="social__item"><a class="social__link social__link-github" href="#">
-											<svg class="social__icon icon-white">
-												<use xlink:href="./assets/images/icons/sprite.svg#github"></use>
-											</svg></a></li>
-									<li class="social__item"><a class="social__link social__link-in" href="#">
-											<svg class="social__icon icon-white">
-												<use xlink:href="./assets/images/icons/sprite.svg#in"></use>
-											</svg></a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="header__ham">
-							<div class="ham-btn" id="ham_btn">
-								<div class="ham-bar"></div>
-							</div>
-						</div>
-					</header>
-					<div class="hero__background--svg background-svg"></div>
-					<div class="hero__avatar avatar">
-						<div class="avatar__pic"><img class="avatar__img" src="./assets/images/photo.png"></div>
-						<div class="avatar__name">Олег Анисов</div>
-						<div class="avatar__info">Личный сайт веб разработчика</div>
-					</div><a class="btn-next" href="#myworks">
-						<svg class="btn-next__ico">
-							<use xlink:href="./assets/images/icons/sprite.svg#portf_arrow_down"></use>
-						</svg></a>
-					<div class="hero__bottom">
-						<div class="hero__triangles">
-							<svg class="triangle triangle_fill_gray" viewbox="0 0 900 150" preserveAspectRatio="none">
-								<polygon points="0,0 0,150 900,150"></polygon>
-							</svg>
-							<svg class="triangle triangle_fill_gray" viewbox="0 0 900 150" preserveAspectRatio="none">
-								<polygon points="0,150 900,150 900,0"></polygon>
-							</svg>
-						</div>
-						<div class="hero__title">
-							<h1 class="title-h1 title-h1--works">Мои работы</h1>
-						</div>
-					</div>
-				</section>
-				<section class="section works" id="myworks">
-					<div class="works__content">
-						<div class="works__slider">
-							<div class="slider">
-								<ul class="slider__list">
-									<li class="slider__item">
-										<div class="slider__item-left">
-											<div class="slider__item-description">
-												<h2 class="title-h2 slider__item-title">Сайт школы онлайн образования</h2>
-												<div class="slider__item-techonologies">HTML , CSS, JavaScript</div><a class="btn-slider">Посмотреть сайт</a>
-											</div>
-										</div>
-										<div class="slider__item-right">
-											<div class="slider__item-right-top">
-												<div class="slider__item-image"><img class="slider__item-image-pic" src="./assets/images/slide1.png"></div>
-											</div>
-											<div class="slider__item-right-bottom">
-												<div class="slider__item-nav">
-													<div class="slider__item-prev">
-														<svg class="slider__icon">
-															<use xlink:href="./assets/images/icons/sprite.svg#portf_arrow_down"></use>
-														</svg>
-													</div>
-													<div class="slider__item-next">
-														<svg class="slider__icon">
-															<use xlink:href="./assets/images/icons/sprite.svg#portf_arrow_up"></use>
-														</svg>
-													</div>
-												</div>
-											</div>
-										</div>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</section>
-				<section class="section feeds">
+				<div class="slider-container" id="slider">
+					<div id="slider-component"></div>
+				</div>
+				<section class="feeds">
 					<div class="feeds__content">
 						<div class="feeds__title">
 							<h2 class="title-h1 title-h1--feeds">Что обо мне говорят</h2>
@@ -125,10 +98,10 @@
 								</li>
 							</ul>
 						</div>
-						<div class="form">
+						<div class="feeds__form form">
 							<form class="form__area" action="post">
 								<div class="form__fields">
-									<h2 class="title-h2 title-h2--color--white form__title">Связаться со мной</h2>
+									<h2 class="title-h2 title-h2--color-white form__title">Связаться со мной</h2>
 									<div class="form__row">
 										<div class="form__field">
 											<label class="form__label form__label_input">Имя</label>
@@ -138,7 +111,7 @@
 									<div class="form__row">
 										<div class="form__field">
 											<label class="form__label form__label_input">Email</label>
-											<input class="form__input-text" type="text" placeholder="Ваше Email">
+											<input class="form__input-text" type="text" placeholder="Ваш Email">
 										</div>
 									</div>
 									<div class="form__row">
@@ -155,61 +128,103 @@
 									</div>
 								</div>
 							</form>
-						</div><a class="btn-prev" href="#myworks">
+						</div><a class="btn-prev" id="btn_prev" href="#slider">
 							<svg class="btn-prev__ico">
 								<use xlink:href="./assets/images/icons/sprite.svg#portf_arrow_up"></use>
 							</svg></a>
 					</div>
 				</section>
 			</div>
-		</div>
-		<footer class="footer">
-			<div class="footer__main">
-				<div class="footer__left">
-					<p class="footer__text">Этот сайт я сделал в рамках обучения в Школе</p>
-					<p class="footer__text">онлайн образования LoftSchool.</p>
-				</div>
-				<div class="footer__center">
-					<div class="footer__menu">
-						<nav class="footer-nav">
-							<ul class="footer-nav__list">
-								<li class="footer-nav__item"><a class="footer-nav__link" href="works.html">Мои работы</a></li>
-								<li class="footer-nav__item"><a class="footer-nav__link" href="about.html">Обо мне</a></li>
-								<li class="footer-nav__item"><a class="footer-nav__link" href="blog.html">Блог</a></li>
-								<li class="footer-nav__item"><a class="footer-nav__link" href="index.html">Авторизация</a></li>
-							</ul>
-						</nav>
+			<footer class="footer">
+				<div class="footer__main">
+					<div class="footer__left">
+						<p class="footer__text">Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.</p>
 					</div>
-					<div class="footer__social">
-						<div class="social">
-							<ul class="social__list">
-								<li class="social__item"><a class="social__link social__link-vk" href="#">
-										<svg class="social__icon icon-gray">
-											<use xlink:href="./assets/images/icons/sprite.svg#vk"></use>
-										</svg></a></li>
-								<li class="social__item"><a class="social__link social__link-github" href="#">
-										<svg class="social__icon icon-gray">
-											<use xlink:href="./assets/images/icons/sprite.svg#github"></use>
-										</svg></a></li>
-								<li class="social__item"><a class="social__link social__link-in" href="#">
-										<svg class="social__icon icon-gray">
-											<use xlink:href="./assets/images/icons/sprite.svg#in"></use>
-										</svg></a></li>
-							</ul>
+					<div class="footer__center">
+						<div class="footer__menu">
+							<nav class="footer-nav" id="footer_nav">
+								<ul class="footer-nav__list">
+									<li class="footer-nav__item"><a class="footer-nav__link" href="works.html">Мои работы</a></li>
+									<li class="footer-nav__item"><a class="footer-nav__link" href="about.html">Обо мне</a></li>
+									<li class="footer-nav__item"><a class="footer-nav__link" href="blog.html">Блог</a></li>
+									<li class="footer-nav__item"><a class="footer-nav__link" href="index.html">Авторизация</a></li>
+								</ul>
+							</nav>
+						</div>
+						<div class="footer__social">
+							<div class="social">
+								<ul class="social__list">
+									<li class="social__item"><a class="social__link social__link-vk" href="#">
+											<svg class="social__icon social__icon--gray">
+												<use xlink:href="./assets/images/icons/sprite.svg#vk"></use>
+											</svg></a></li>
+									<li class="social__item"><a class="social__link social__link-github" href="#">
+											<svg class="social__icon social__icon--gray">
+												<use xlink:href="./assets/images/icons/sprite.svg#github"></use>
+											</svg></a></li>
+									<li class="social__item"><a class="social__link social__link-in" href="#">
+											<svg class="social__icon social__icon--gray">
+												<use xlink:href="./assets/images/icons/sprite.svg#in"></use>
+											</svg></a></li>
+								</ul>
+							</div>
 						</div>
 					</div>
+					<div class="footer__right">
+						<div class="footer__skype">anisov13</div>
+						<div class="footer__mail">anisov@obninsk.ru</div>
+						<phone class="footer__phone">+7 919 991 75 93</phone>
+						<address class="footer__adr">г. Обнинск, ул. Энгельса, д.2</address>
+					</div>
 				</div>
-				<div class="footer__right">
-					<div class="footer__skype">skype_kdn</div>
-					<div class="footer__mail">astahov@gmail.com</div>
-					<phone class="footer__phone">+7 931 200 93 24</phone>
-					<address class="footer__adr">г. Новосибирск, ул. Инская, д.4</address>
+				<div class="footer__bottom">
+					<p class="footer__copyright">© Олег Анисов | Создано с любовью в LoftSchool | 2019</p>
+				</div>
+			</footer>
+		</div>
+		<nav class="ham-menu" id="ham_menu">
+			<ul class="ham-menu__list">
+				<li class="ham-menu__item"><a class="ham-menu__link" href="works.html">Мои работы</a></li>
+				<li class="ham-menu__item"><a class="ham-menu__link" href="blog.html">Блог</a></li>
+				<li class="ham-menu__item"><a class="ham-menu__link" href="about.html">Обо мне</a></li>
+				<li class="ham-menu__item"><a class="ham-menu__link" href="index.html">Авторизация</a></li>
+			</ul>
+		</nav>
+		<script type="text/x-template" id="slider-root">
+			<div class="slider">
+				<info :work="currentWork"></info>
+				<display :work="currentWork"></display>
+				<btns :works="works" :index="currentIndex" @slide="handleSlide"></btns>
+			</div>
+		</script>
+		<script type="text/x-template" id="slider-info">
+			<div class="slider__info-container">
+				<div class="slider__info">
+					<div class="slider__info-title">
+						<div class="title-h2">{{work.title}}</div>
+						<div class="slider__info-skills">{{work.skills}}</div>
+					</div>
+					<div class="slider__info-button"><a class="btn-slider" :href="work.link" target="_blank">Посмотреть сайт</a></div>
 				</div>
 			</div>
-			<div class="footer__bottom">
-				<p class="footer__copyright">© Олег Анисов | Создано с любовью в LoftSchool | 2019</p>
+		</script>
+		<script type="text/x-template" id="slider-display">
+			<div class="slider__display"><img class="slider__big-pic" :src="work.photo" alt=""></div>
+		</script>
+		<script type="text/x-template" id="slider-btns">
+			<div class="slider__buttons">
+				<div class="slider__button slider__button--prev" @click="slide('prev')">
+					<div class="slider__button-img-container">
+						<div class="slider__button-img-wrap"><img class="slider__button-pic" :src="prevButtonsWorks[index].photo" alt=""></div>
+					</div>
+				</div>
+				<div class="slider__button slider__button--next" @click="slide('next')">
+					<div class="slider__button-img-container">
+						<div class="slider__button-img-wrap"><img class="slider__button-pic" :src="nextButtonsWorks[index].photo" alt=""></div>
+					</div>
+				</div>
 			</div>
-		</footer>
-		<script src="./about.bundle.js"></script>
+		</script>
+		<script src="./works.bundle.js"></script>
 	</body>
 </html>

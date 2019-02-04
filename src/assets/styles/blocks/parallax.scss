@@ -1,0 +1,29 @@
+.parallax-block {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #223b65;
+  z-index: -1;
+  overflow: hidden;
+  &__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    will-change: transform;
+  }
+  &__img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 110%;
+  }
+  &__video{
+    min-width: 100%;
+    min-height: 100%;
+  }
+}

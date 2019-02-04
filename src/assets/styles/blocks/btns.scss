@@ -1,9 +1,3 @@
-.auth-btn {
-  position: absolute;
-  top: 5%;
-  right: 5%;
-}
-
 .btn {
   font-weight: 500;
   padding: 15px 30px;
@@ -11,23 +5,35 @@
   display: inline-block;
   background-color: transparent;
   border: 1px solid #fff;
-  transition: .3s;
+  transition: background-color .3s;
   cursor: pointer;
   &:hover {
     background-color: $blue-dark;
     border: 1px solid transparent;
   }
+  &.hidden{
+    display: none;
+  }
 }
 
 .btn-slider {
   font-weight: 500;
-  padding: 15px 30px;
+  padding: 15px 20px;
   color: #fff;
   display: inline-block;
   background-color: $blue-light;
   border: 1px solid $blue-light;
   transition: .3s;
   cursor: pointer;
+  &::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url('./assets/images/link.svg');
+    height: 20px;
+    width: 20px;
+    margin-right: 15px;
+  }
   &:hover {
     background-color: $blue-dark;
     border: 1px solid transparent;
@@ -45,15 +51,20 @@
 
 .btn-next {
   @extend %btn_arrow;
-  bottom: 20%;
+  bottom: 190px;
   &:hover .btn-next__ico {
     opacity: 1;
+  }
+  @include phones{
+    bottom: 180px;
+  }
+  @include smallphones{
+    bottom: 140px;
   }
 }
 
 .btn-prev {
   @extend %btn_arrow;
-  bottom: 5%;
   &:hover .btn-prev__ico {
     opacity: 1;
   }

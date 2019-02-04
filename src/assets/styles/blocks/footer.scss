@@ -1,18 +1,58 @@
 .footer {
   color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
   &__main {
-    display: flex;
-    background-color: rgba($gray, 0.851);
-    padding: 30px 0;
+    display: grid;
+    grid-template: "left center right" 1fr / 35% 1fr 25%;;
+    background-color: rgba($gray, 0.85);
+    padding: 30px 30px;
+    @include laptop {
+      grid-template: "left center right" 1fr / 30% 1fr 25%;
+    }
+    @include tablets {
+      padding: 15px 15px;
+      grid-template: "left left" 35% "center right" 1fr / 1fr 1fr;
+    }
+    @include phones {
+      grid-template: "left" 1fr "center" 1fr "right" 1fr / 1fr;
+    }
   }
   &__left {
-    padding-left: 30px;
-    width: 35%;
+    grid-area: left;
+    position: relative;
+    padding-right: 30px;
+    @include tablets {
+      padding-left: initial;
+      margin-bottom: 20px;
+      &::before {
+        content: "";
+        display: block;
+        background-color: $gray-light;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -10px;
+        width: 99%;
+        height: 1px;
+        @include phones {
+          bottom: 0;
+        }
+      }
+    }
   }
   &__center {
-    padding-left: 30px;
-    width: 40%;
+    grid-area: center;
+    padding: 0 30px;
     position: relative;
+    @include tablets {
+      padding: 0 0;
+    }
+    @include phones {
+      text-align: center;
+    }
     &::before {
       content: "";
       display: block;
@@ -21,13 +61,39 @@
       left: 0;
       width: 1px;
       height: 85px;
+      @include tablets {
+        display: none;
+      }
+      @include phones {
+        display: block;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        width: 99%;
+        height: 1px;
+      }
+    }
+  }
+  &__social {
+    @include phones {
+      display: flex;
+      justify-content: center;
     }
   }
   &__right {
+    grid-area: right;
     font-weight: 300;
     padding-left: 30px;
-    width: 25%;
     position: relative;
+    @include tablets {
+      text-align: right;
+      padding-left: initial;
+    }
+    @include phones {
+      width: 100%;
+      text-align: center;
+      padding-top: 2%;
+    }
     &::before {
       content: "";
       display: block;
@@ -36,23 +102,49 @@
       left: 0;
       width: 1px;
       height: 85px;
+      @include tablets {
+        display: none;
+      }
     }
   }
   &__text {
     font-weight: 300;
+    @include tablets {
+      text-align: center;
+    }
   }
   &__adr {
     font-style: normal;
   }
   &__bottom {
     background-color: rgba($blue-dark, 0.851);
+    @include phones {
+      padding: 0 2%;
+    }
   }
   &__menu {
     margin-bottom: 30px;
+    @include tablets {
+      margin-bottom: 4%;
+    }
   }
   &__copyright {
-    font-size: 15.771px;
+    font-weight: 300;
     text-align: center;
     line-height: 35px;
+    @include phones {
+      line-height: 30px;
+    }
+    &--welcome {
+      padding: 40px 0;
+      @include smallphones {
+        line-height: 25px;
+        padding: 10px 30px;
+      }
+    }
   }
+}
+
+.page-blog .footer {
+  position: static;
 }

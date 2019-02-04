@@ -12,10 +12,56 @@ mixin social(items,classColor)
         li.social__item
           a(class=`social__link social__link-${item}` href='#')
             +icon(`${item}`,`social__icon ${classColor}`)
-mixin menu(items,className)
-  nav(class=`${className}`)
+            
+mixin menu(items,className,elemId)
+  nav(class=`${className}` id =`${elemId}`)
     ul(class=`${className}__list`)
       each item in items
         li(class=`${className}__item`)
           a(class=`${className}__link` href=`${item.href}`)=item.name
-  
+
+mixin avatar(className, title, subtitle, svgExist)
+  .avatar
+    if (svgExist)
+      .avatar__stars
+        svg.avatar__svg
+          use(xlink:href="./assets/images/sprite_stars.svg#stars1")
+    .avatar__pic
+      img.avatar__img(src='./assets/images/photo.png', alt="Photo")
+    .avatar__desc
+      h2(class=`avatar__name ${className}`)=title
+      p.avatar__info= subtitle
+
+mixin triangles(className)
+  div(class=`triangles ${className}`)
+    svg(class=`triangles__svg` viewbox="0 0 1000 85", preserveAspectRatio="none")
+      polygon(class = `triangles__left` points="0,0   0,86   500.8,86   500.8,84")
+      polygon(class = `triangles__right` points="1000,0   1000,86   500,86   500,84")
+    block trianglesBottom
+
+mixin ham-btn
+  .ham-btn#ham_btn
+    .ham-bar
+
+mixin logInput(iconClass, typeInput, placeholderInput, subclass, inputClass, name, minLength)
+  div(class="login-input " + inputClass)
+    if (minLength)
+      input(id=name type=typeInput, placeholder=placeholderInput name=name required minlength=`${minLength}`).login-input__input
+    else
+      input(id=name type=typeInput, placeholder=placeholderInput name=name required).login-input__input
+    span(class="login-input__icon "+subclass)
+      i(aria-hidden="true" class="fa "+iconClass)
+
+mixin checkbox(name, title, inputClass, id)
+  label(class="checkbox " + inputClass)
+    input(type="checkbox", name=name, id=id, class="checkbox__input" required)
+    span.checkbox__span
+      i(aria-hidden="true" class="fa fa-check")
+    span.checkbox__title= title
+
+mixin radio(name, title, inputClass, value)
+  label(class="radio " + inputClass)
+    input(id=id, type="radio", name=name, class="radio__input" value=value)
+    span.radio__span
+      i(aria-hidden="true" class="fa fa-circle")
+    span.radio__title= title

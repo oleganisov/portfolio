@@ -2,51 +2,33 @@ extends ../main.layout.pug
 
 block variables
   - var title = 'Мои работы'
+  - var pageClass = 'page-works'
+
+block headerAvatar
+  .header__avatar  
+    +avatar('', 'Олег Анисов', 'Личный сайт веб разработчика',true)
+
+block headerBottom
+  a.btn-next#btn_next(href="#slider")
+    +icon('portf_arrow_down','btn-next__ico')
+
+block trianglesBottom
+  div(class = "triangles__bottom" )
+    h1.title-h1.title-h1--works= title
+    .triangles__stars
+      svg(viewBox="0 0 263 171")
+        use(xlink:href="./assets/images/sprite_stars.svg#stars2")
+
+block templates
+  include ../components/templates/slider
 
 block scripts
-  script(src='./about.bundle.js')
+  script(src='./works.bundle.js')
 
 block content
-  section.section.hero
-    include ../common/header
-    .hero__background--svg.background-svg
-    .hero__avatar.avatar
-      .avatar__pic
-        img.avatar__img(src='./assets/images/photo.png')
-      .avatar__name='Олег Анисов'
-      .avatar__info='Личный сайт веб разработчика'
-    a.btn-next(href="#myworks")
-      +icon('portf_arrow_down','btn-next__ico')
-    .hero__bottom
-      .hero__triangles
-        svg.triangle.triangle_fill_gray(viewbox="0 0 900 150", preserveAspectRatio="none")
-          polygon(points="0,0 0,150 900,150")
-        svg.triangle.triangle_fill_gray(viewbox="0 0 900 150", preserveAspectRatio="none")
-          polygon(points="0,150 900,150 900,0")
-      .hero__title
-        h1.title-h1.title-h1--works= title
-  section.section.works#myworks
-    .works__content
-      .works__slider
-        .slider
-          ul.slider__list
-            li.slider__item
-              .slider__item-left
-                .slider__item-description
-                  h2.title-h2.slider__item-title Сайт школы онлайн образования
-                  .slider__item-techonologies HTML , CSS, JavaScript
-                  a.btn-slider Посмотреть сайт
-              .slider__item-right
-                .slider__item-right-top
-                  .slider__item-image
-                    img.slider__item-image-pic(src="./assets/images/slide1.png")
-                .slider__item-right-bottom
-                  .slider__item-nav
-                    .slider__item-prev
-                      +icon('portf_arrow_down', 'slider__icon')
-                    .slider__item-next
-                      +icon('portf_arrow_up', 'slider__icon')
-  section.section.feeds
+  .slider-container#slider
+    #slider-component
+  section.feeds
     .feeds__content
       .feeds__title
         h2.title-h1.title-h1--feeds Что обо мне говорят
@@ -66,10 +48,10 @@ block content
               .reviews__author
                 .reviews__author-name Сабанцев Владимир
                 .reviews__author-post - преподаватель
-      .form
+      .feeds__form.form
         form.form__area(action='post')
           .form__fields
-            h2.title-h2.title-h2--color--white.form__title Связаться со мной
+            h2.title-h2.title-h2--color-white.form__title Связаться со мной
             .form__row
               .form__field
                 label.form__label.form__label_input Имя
@@ -77,7 +59,7 @@ block content
             .form__row
               .form__field
                 label.form__label.form__label_input Email
-                input.form__input-text(type='text', placeholder='Ваше Email')
+                input.form__input-text(type='text', placeholder='Ваш Email')
             .form__row
               .form__field
                 label.form__label.form__label_input Ваше сообщение
@@ -86,5 +68,5 @@ block content
               .form__btns
                 button.form__button.form__button-submit(type='submit') Отправить
                 button.form__button.form__button-clear(type='clear') Очистить
-      a.btn-prev(href="#myworks")
+      a.btn-prev#btn_prev(href="#slider")
         +icon('portf_arrow_up', 'btn-prev__ico')

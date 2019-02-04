@@ -1,6 +1,12 @@
 header.header
-  .header__social
-    +social(['vk','github','in'],'icon-white')
-  .header__ham
-    include ./ham-btn
+  .header__top
+    +social(['vk','github','in'],'social__icon--white')
+    +ham-btn
+  img.header__bg(src="./assets/images/bg/bg_1800.jpg", alt="")
 
+  block headerAvatar
+
+  block headerBottom
+
+  block headerTriangles
+    +triangles('header__triangles')

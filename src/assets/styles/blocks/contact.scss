@@ -1,12 +1,36 @@
 .contacts {
-	padding: 35px 40px 30px;
-	background-color: rgba($white, .85);
+  width:590px;
+	padding: 35px 20px 30px;
+	background-color: rgba(#fff, .7);
   border-radius: 5px;
+  @include tablets{
+    width: 350px;
+  }
+  @include phones{
+    width: initial;
+    padding: 10px 0 30px 10px;
+    background-color: rgba(#fff, 1);
+  }
   &__title {
-    width: 100%;
+    margin-bottom: 30px;
+    @include phones{
+      margin-bottom: 20px;
+    }
+  }
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    @include tablets{
+      flex-direction: column;
+    }
   }
   &__item {
-    margin-bottom: 20px;
+    flex: 1;
+    min-width: 50%;
+    margin-bottom: 28px;
+    @include phones{
+      margin-bottom: 10px;
+    }
   }
   &__item-icon {
     width: 24px;
